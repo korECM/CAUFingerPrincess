@@ -25,7 +25,7 @@ async function makePostRequest() {
         libraryInfo.totalCnt[i] = res.data.gridData[i].totalCnt;
         libraryInfo.useCnt[i] = res.data.gridData[i].useCnt;
         libraryInfo.remainCnt[i] = res.data.gridData[i].remainCnt;
-        console.log(`roomName: ${res.data.gridData[i].roomName} | 총 인원수: ${res.data.gridData[i].totalCnt} | 현사용 인원수: ${res.data.gridData[i].useCnt} | 여석: ${res.data.gridData[i].remainCnt}`);
+        console.log(`roomName: ${res2.data.gridData[i].roomName} | 총 인원수: ${res2.data.gridData[i].totalCnt} | 현사용 인원수: ${res2.data.gridData[i].useCnt} | 여석: ${res2.data.gridData[i].remainCnt}`);
     }
 }
 
