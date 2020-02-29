@@ -11,7 +11,7 @@ function leapYear(n) {
   return false;
 }
 
-test("2020년은 윤년이다", () => {
+test("2020년은 윤년이다 ", () => {
   expect(leapYear(2020)).toBe(true);
 });
 
