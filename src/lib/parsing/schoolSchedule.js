@@ -11,7 +11,7 @@ class schoolScheduleAPI {
     } catch (error) {
       throw error;
     }
-  }
+}
 
   callAPI(year, siteNo = 2) {
     return new Promise((resolve, reject) => {
