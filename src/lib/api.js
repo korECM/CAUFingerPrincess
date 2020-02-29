@@ -1,64 +1,32 @@
 const axios = require('axios');
 
+var libraryInfo = new Object();
+
 async function makePostRequest() {
     let res = await axios.post('https://mportal.cau.ac.kr/portlet/p017/p017.ajax', {
         tabNo : 1
+    });
+
+    let res2 = await axios.post('https://mportal.cau.ac.kr/portlet/p017/p017.ajax', {
+        tabNo : 2
+    });
+
+    let res3 = await axios.post('https://mportal.cau.ac.kr/portlet/p017/p017.ajax', {
+        tabNo : 3
     });
 
     console.log(`Status code: ${res.status}`);
     console.log(`Status text: ${res.statusText}`);
     console.log(`Request method: ${res.request.method}`);
     console.log(`Path: ${res.request.path}`);
-
     console.log(`Date: ${res.headers.date}`);
-    // console.log(`Data: ${res.data}`);
-
-    console.log(`Data: ${res.data.gridData[0].roomName}`);
+    for(var i = 0; i < 13; i++){
+        libraryInfo.roomName[i] = res.data.gridData[i].roomName;
+        libraryInfo.totalCnt[i] = res.data.gridData[i].totalCnt;
+        libraryInfo.useCnt[i] = res.data.gridData[i].useCnt;
+        libraryInfo.remainCnt[i] = res.data.gridData[i].remainCnt;
+        console.log(`roomName: ${res.data.gridData[i].roomName} | 총 인원수: ${res.data.gridData[i].totalCnt} | 현사용 인원수: ${res.data.gridData[i].useCnt} | 여석: ${res.data.gridData[i].remainCnt}`);
+    }
 }
 
 makePostRequest();
-
-
-// import axios from 'axios'
-
-// Vue.prototype.$http = axios
-
-// // export const getPost = id => axios.get(`link`);
-
-// axios.post('https://mportal.cau.ac.kr/portlet/p017/p017.ajax', {
-//     // user: 'velopert',
-//     // message: 'hi'
-// })
-// .then( response => { console.log(response) } )
-// .catch( response => { console.log(response) } );
-
-// const axios = require('axios');
-
-// const getLibrary = () => {
-//   try {
-//     return axios.get('https://mportal.cau.ac.kr/portlet/p017/p017.ajax');
-//   } catch (error) {
-//     console.error(error)
-//   }
-// };
-
-// const printRoomInfo = () => {
-//     const roomInfo = getLibrary()
-//         .then(response => {
-//             if (response.data.)
-//         })
-// }
-
-// // const countBreeds = () => {
-// //   const breeds = getBreeds()
-// //   	.then(response => {
-// //       if (response.data.message) {
-// //         console.log(`현재 강아지의 수는 ${Object.entries(breeds.data.message).length}입니다.`);
-// //       }
-// //   	})
-// //   	.catch(error => {
-// //       console.log(error);
-// //   	})
-// // };
-
-// // countBreeds();
