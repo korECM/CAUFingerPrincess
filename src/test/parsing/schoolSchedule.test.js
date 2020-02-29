@@ -19,7 +19,6 @@ describe("schoolSchedule.js는 ", () => {
         }
       };
 
-      // console.log(data);
       expect(data.find(e => e.title === "신정(공휴일)")).toEqual(expected);
       done();
     }, 10000);
