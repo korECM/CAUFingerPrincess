@@ -49,7 +49,14 @@ function App() {
             <header
               style={{ position: "relative", width: "100%", height: 235 }}
             >
-              <div className="icon">아이콘?...............공백</div>
+              <div className="icon">
+                <img
+                  src="https://freeiconshop.com/wp-content/uploads/edd/notification-outline.png"
+                  width="34"
+                  height="34"
+                />
+              </div>
+
               <h1 className="mainTitle">CAU Finger Collection</h1>
               <div className="mainMenu">
                 메뉴?? 태그?? 학사일정~ 셔틀버스 학식 몰라
