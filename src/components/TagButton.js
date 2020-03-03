@@ -6,8 +6,10 @@ class TagButton extends Component {
     return (
       <button
         id="roundButton"
-        onMouseDown={this.props.handleMouseDown}
-      ></button>
+        // onMouseDown={this.props.handleMouseDown}
+      >
+        경영경제대학
+      </button>
     );
   }
 }

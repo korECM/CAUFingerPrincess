@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import GlobalStyles from "./components/GlobalStyles";
 import "./App.css";
 import ChineseDragonSVG from "./svg/chinese-dragon-1738876-1477556";
+import "./components/TagButton.css";
+import TagButton from "./components/TagButton";
 
 function App() {
   return (
@@ -58,6 +60,9 @@ function App() {
             <content className="content">
               <ChineseDragonSVG style={{}} />
               이거는 콘텐츠~
+              <div>
+                <TagButton />
+              </div>
               <div>{string}</div>
             </content>
           </main>
