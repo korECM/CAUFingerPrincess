@@ -1,26 +1,11 @@
 #container {
   background-color: #f7fafc;
-  font: "Noto Sans CJK KR";
-}
-
-.navStyle {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 240px;
-  height: 100vh;
-  padding: 100px 0px;
-  padding-top: 60px;
-  background-color: white;
+  font-family: "Noto Sans CJK KR";
 }
 
 .mainStyle {
   margin-left: 240px;
   padding-left: 20px;
-}
-
-.content {
-
 }
 
 .header {
@@ -49,14 +34,30 @@
   left: 0px;
 }
 
+.navStyle {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 240px;
+  height: 100vh;
+  padding: 100px 0px;
+  padding-top: 130px;
+  background-color: white;
+}
+
 .navMenuWrap {
   padding-left: 24px;
-  margin-bottom: 30px;
+  margin-top: 0px;
+  margin-bottom: 15px;
   line-height: 28px;
 }
 
 .navSection {
   color: #9e9fa2;
-  letter-spacing: 2px;
-  font-size: 12px;
+  font-size: 16px;
+}
+
+.navSubMenu {
+  font-size: 14px;
+  margin-left: 14px;
 }

@@ -2,7 +2,15 @@ import React from "react";
 
 const ChineseDragonSVG = () => {
   return (
-    <div style={{ position: "absolute", left: -103, top: 503 }}>
+    <div
+      style={{
+        position: "absolute",
+        left: -103,
+        top: 503,
+        zIndex: 0,
+        opacity: 0
+      }}
+    >
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"

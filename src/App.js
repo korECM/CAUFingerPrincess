@@ -27,22 +27,22 @@ function App() {
         <div className="layout">
           <nav className="navStyle">
             <ul className="navMenuWrap">
-              <li className="navSection">섹션 이름</li>
-              <li>1번 메뉴</li>
-              <li>2번 메뉴</li>
-              <li>3번 메뉴</li>
+              <li className="navSection">학교 정보</li>
+              <li className="navSubMenu">학식</li>
+              <li className="navSubMenu">학사 일정</li>
+              <li className="navSubMenu">졸업 요건</li>
             </ul>
             <ul className="navMenuWrap">
-              <li className="navSection">섹션 이름</li>
-              <li>1번 메뉴</li>
-              <li>2번 메뉴</li>
-              <li>3번 메뉴</li>
+              <li className="navSection">기타</li>
+              <li className="navSubMenu">맛집 리스트</li>
+              <li className="navSubMenu">강의 평</li>
+              <li className="navSubMenu">셔틀 버스 노선</li>
             </ul>
             <ul className="navMenuWrap">
-              <li className="navSection">섹션 이름</li>
-              <li>1번 메뉴</li>
-              <li>2번 메뉴</li>
-              <li>3번 메뉴</li>
+              <li className="navSection">개발자 정보</li>
+              <li className="navSubMenu">자기소개서</li>
+              <li className="navSubMenu">포트폴리오</li>
+              <li className="navSubMenu">성적 조회</li>
             </ul>
           </nav>
           <main className="mainStyle">
@@ -55,15 +55,8 @@ function App() {
                 메뉴?? 태그?? 학사일정~ 셔틀버스 학식 몰라
               </div>
             </header>
-            <ChineseDragonSVG
-              style={{
-                x: -103,
-                y: 503,
-                width: 802,
-                height: 502
-              }}
-            />
             <content className="content">
+              <ChineseDragonSVG style={{}} />
               이거는 콘텐츠~
               <div>{string}</div>
             </content>

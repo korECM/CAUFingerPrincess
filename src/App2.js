@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import GlobalStyles from "./components/GlobalStyles";
-import "./App2.css";
+// import "./App2.css";
 
 function App2() {
   return (
