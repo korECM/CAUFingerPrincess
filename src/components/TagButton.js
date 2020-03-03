@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./TagButton.css";
-import "./TagTextStyle.css";
 
 // const styles = StyleSheet.create({
 //   container: {
@@ -58,7 +57,6 @@ class TagButton extends Component {
   }
 
   changeColor(i) {
-    console.log("asfsdf", i);
     this.setState({
       bool: this.state.bool.map((item, index) => (index !== i ? item : !item))
     });
@@ -87,7 +85,8 @@ class TagButton extends Component {
     var TagTextStyle = {
       fontSize: 30,
       marginRight: 50,
-      marginLeft: 50
+      marginLeft: 50,
+      marginTop: 20
     };
 
     return <div style={TagTextStyle}>{collegeList}</div>;

@@ -52,6 +52,7 @@
     "react-app-polyfill": "^1.0.6",
     "react-dev-utils": "^10.2.0",
     "react-dom": "^16.13.0",
+    "react-native": "0.52.0",
     "react-redux": "^7.2.0",
     "react-svg": "^11.0.12",
     "redux": "^4.0.5",

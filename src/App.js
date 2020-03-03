@@ -4,6 +4,7 @@ import "./App.css";
 import ChineseDragonSVG from "./svg/chinese-dragon-1738876-1477556";
 import "./components/TagButton.css";
 import TagButton from "./components/TagButton";
+import MainLine from "./components/MainLine";
 
 function App() {
   return (
@@ -60,17 +61,13 @@ function App() {
               </div>
 
               <h1 className="mainTitle">CAU Finger Collection</h1>
-              <div className="mainMenu">
-                메뉴?? 태그?? 학사일정~ 셔틀버스 학식 몰라
-              </div>
             </header>
+            <MainLine />
             <content className="content">
               <ChineseDragonSVG style={{}} />
-              이거는 콘텐츠~
               <div>
                 <TagButton />
               </div>
-              <div>{string}</div>
             </content>
           </main>
         </div>
