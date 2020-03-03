@@ -70,7 +70,6 @@ function App() {
 
             <MainLine />
             <div className="content">
-              <ChineseDragonSVG style={{}} />
               <div>
                 <TagButton />
               </div>
