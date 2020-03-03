@@ -1,73 +1,31 @@
 import React, { Fragment } from "react";
 import GlobalStyles from "./components/GlobalStyles";
-import "./App.css";
-import ChineseDragonSVG from "./svg/chinese-dragon-1738876-1477556";
+import "./App2.css";
 
-function App() {
+function App2() {
   return (
     <Fragment>
       <GlobalStyles />
-      <div id="container">
-        <header style={{ position: "fixed", left: 24, top: 30, zIndex: 1000 }}>
-          <img
-            src="http://icons.iconarchive.com/icons/iconsmind/outline/512/One-Finger-icon.png"
-            width="34"
-            height="34"
-          />
-          <span
-            style={{
-              font: "Noto Sans CJK KR",
-              fontSize: 30,
-              fontWeight: "bold"
-            }}
-          >
-            <span style={{ color: "#7FC9F1" }}>모아</span>보기
-          </span>
-        </header>
-        <div className="layout">
-          <nav className="navStyle">
-            <ul className="navMenuWrap">
-              <li className="navSection">섹션 이름</li>
-              <li>1번 메뉴</li>
-              <li>2번 메뉴</li>
-              <li>3번 메뉴</li>
-            </ul>
-            <ul className="navMenuWrap">
-              <li className="navSection">섹션 이름</li>
-              <li>1번 메뉴</li>
-              <li>2번 메뉴</li>
-              <li>3번 메뉴</li>
-            </ul>
-            <ul className="navMenuWrap">
-              <li className="navSection">섹션 이름</li>
-              <li>1번 메뉴</li>
-              <li>2번 메뉴</li>
-              <li>3번 메뉴</li>
-            </ul>
-          </nav>
-          <main className="mainStyle">
-            <header
-              style={{ position: "relative", width: "100%", height: 235 }}
-            >
-              <div className="icon">아이콘?...............공백</div>
-              <h1 className="mainTitle">CAU Finger Collection</h1>
-              <div className="mainMenu">
-                메뉴?? 태그?? 학사일정~ 셔틀버스 학식 몰라
-              </div>
-            </header>
-            <ChineseDragonSVG
-              style={{
-                x: -103,
-                y: 503,
-                width: 802,
-                height: 502
-              }}
-            />
-            <content className="content">
-              이거는 콘텐츠~
-              <div>{string}</div>
-            </content>
-          </main>
+      <div id="wrap" className="wrap">
+        <header className="header">헤더</header>
+        <div className="content">
+          <div className="aside">
+            <div>
+              <ul className="navMenuWrap">
+                <li className="navSection">섹션 이름</li>
+                <li>1번 메뉴</li>
+                <li>2번 메뉴</li>
+                <li>3번 메뉴</li>
+              </ul>
+              <ul className="navMenuWrap">
+                <li className="navSection">섹션 이름</li>
+                <li>1번 메뉴</li>
+                <li>2번 메뉴</li>
+                <li>3번 메뉴</li>
+              </ul>
+            </div>
+          </div>
+          <div className="main">{string}</div>
         </div>
       </div>
     </Fragment>
@@ -232,4 +190,4 @@ Aliquip dolore reprehenderit tempor mollit Lorem sint cupidatat sint
 duis irure nisi. Deserunt amet laborum incididunt labore incididunt
 ullamco commodo sunt est fugiat voluptate esse in.`;
 
-export default App;
+export default App2;

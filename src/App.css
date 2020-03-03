@@ -1,0 +1,62 @@
+#container {
+  background-color: #f7fafc;
+  font: "Noto Sans CJK KR";
+}
+
+.navStyle {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 240px;
+  height: 100vh;
+  padding: 100px 0px;
+  padding-top: 60px;
+  background-color: white;
+}
+
+.mainStyle {
+  margin-left: 240px;
+  padding-left: 20px;
+}
+
+.content {
+
+}
+
+.header {
+  position: fixed;
+  top: 30px;
+  left: 24px;
+}
+
+.icon {
+  position: absolute;
+  top: 25px;
+  right: 0px;
+}
+
+.mainTitle {
+  position: absolute;
+  bottom: 80px;
+  left: 0px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.mainMenu {
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+}
+
+.navMenuWrap {
+  padding-left: 24px;
+  margin-bottom: 30px;
+  line-height: 28px;
+}
+
+.navSection {
+  color: #9e9fa2;
+  letter-spacing: 2px;
+  font-size: 12px;
+}

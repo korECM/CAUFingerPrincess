@@ -1,51 +1,23 @@
-import schoolScheduleAPI from "../../lib/parsing/schoolSchedule";
+import getSchoolSchedule from "../../lib/parsing/schoolSchedule";
 
-describe("schoolSchedule.js는 ", () => {
-  describe("getSchoolSchedule 메소드는", () => {
+describe("schoolSchedule.js는", () => {
+  describe("get 메소드는", () => {
     it("성공적으로 데이터를 불러오면 올바른 객체를 반환한다", async done => {
-      const api = new schoolScheduleAPI();
-      const data = await api.getSchoolSchedule(2020);
-      const expected = {
-        title: "신정(공휴일)",
-        start: {
-          year: 2020,
-          month: 1,
-          day: 1
-        },
-        end: {
-          year: 2020,
-          month: 1,
-          day: 1
-        }
-      };
-
-      expect(data.find(e => e.title === "신정(공휴일)")).toEqual(expected);
+      const data = await getSchoolSchedule(2020);
+      data.map(e => {
+        expect(e).toHaveProperty("title");
+        expect(e).toHaveProperty("start");
+        expect(e).toHaveProperty("end");
+        expect(e.start).toHaveProperty("year");
+        expect(e.start).toHaveProperty("month");
+        expect(e.start).toHaveProperty("day");
+        expect(e.end).toHaveProperty("year");
+        expect(e.end).toHaveProperty("month");
+        expect(e.end).toHaveProperty("day");
+      });
       done();
     }, 10000);
-
-    it("성공적으로 데이터를 불러오지 못하면 에러를 발생시킨다", () => {
-      const axiosMock = {};
-      axiosMock.post = () => {
-        return new Promise((resolve, reject) => {
-          reject();
-        });
-      };
-      const api = new schoolScheduleAPI(axiosMock);
-      expect(() => api.getSchoolSchedule(2020).toThrow());
-    });
   });
-  describe("callAPI 메소드는 ", () => {
-    it("성공적으로 데이터를 불러오지 못하면 에러를 발생시킨다", () => {
-        const axiosMock = {};
-        axiosMock.post = () => {
-          return new Promise((resolve, reject) => {
-            reject();
-          });
-        };
-        const api = new schoolScheduleAPI(axiosMock);
-        expect(() => api.getSchoolSchedule(2020).toThrow());
-      });
-    });
 });
 
 // SUBJECT : 이름
