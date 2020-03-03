@@ -23,7 +23,8 @@ async function callAPI(tapNo) {
       tabNo: tapNo
     }
   );
+  console.log(res.data.gridData);
   return res.data.gridData;
 }
 
-export default getLibrary;
+//export default getLibrary;
