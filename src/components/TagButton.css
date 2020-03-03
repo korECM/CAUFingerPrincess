@@ -1,22 +1,36 @@
 #roundButton {
-  background-color: #96d9ff;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-right: -4px;
+  margin: 10px;
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  padding: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 20px;
+  font-family: Noto Sans CJK KR;
+  box-shadow: 2px 2px 2px 2px gray;
+  /* background-color: #96d9ff;
   margin-bottom: 20px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   border: 10px solid #0065a6;
   outline: none;
-  transition: all 0.2s cubic-bezier(0, 1.26, 0.8, 1.28);
+  transition: all 0.2s cubic-bezier(0, 1.26, 0.8, 1.28); */
 }
 
 #roundButton:hover {
-  background-color: #96d9ff;
-  cursor: pointer;
-  border-color: #003557;
-  transform: scale(1.2, 1.2);
+  color: white;
+  background-color: skyblue;
+  border: 1px solid skyblue;
 }
 
-#roundButton:active {
+/* #roundButton:active {
   border-color: #003557;
   background-color: #fff;
-}
+} */
