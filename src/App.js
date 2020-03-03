@@ -2,7 +2,12 @@ import React, { Fragment } from "react";
 import GlobalStyles from "./components/GlobalStyles";
 import "./App.css";
 import ChineseDragonSVG from "./svg/chinese-dragon-1738876-1477556";
+
 import LibraryCard from "./components/library/libraryCard";
+import "./components/TagButton.css";
+import TagButton from "./components/TagButton";
+import MainLine from "./components/MainLine";
+import NoticeCard from "./components/CollageNotice";
 
 function App() {
   return (
@@ -61,14 +66,17 @@ function App() {
               </div>
 
               <h1 className="mainTitle">CAU Finger Collection</h1>
-              <div className="mainMenu">
-                메뉴?? 태그?? 학사일정~ 셔틀버스 학식 몰라
-              </div>
             </header>
+
+            <MainLine />
             <div className="content">
               <ChineseDragonSVG style={{}} />
+              <div>
+                <TagButton />
+              </div>
               <div className="gridContent">
                 <LibraryCard />
+                <NoticeCard />
               </div>
             </div>
           </main>
