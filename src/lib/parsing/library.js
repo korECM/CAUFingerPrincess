@@ -1,8 +1,14 @@
 const axios = require("axios");
 
 async function getLibrary(tapNo) {
-  const rawData = await callAPI(tapNo);
-  return parseData(rawData);
+  try {
+    const rawData = await callAPI(tapNo);
+    return parseData(rawData);
+  } catch (error) {
+    return {
+      error: {}
+    };
+  }
 }
 
 function parseData(data) {
@@ -16,14 +22,15 @@ function parseData(data) {
   });
 }
 
-async function callAPI(tapNo) {
-  let res = await axios.post(
-    "https://mportal.cau.ac.kr/portlet/p017/p017.ajax",
-    {
-      tabNo: tapNo
-    }
-  );
-  return res.data.gridData;
+async function callAPI(tabNo) {
+  try {
+    let res = await axios.get(
+      `https://wi8cwa01z1.execute-api.ap-northeast-2.amazonaws.com/dev/getLibrary/${tabNo}`
+    );
+    return JSON.parse(res.data).gridData;
+  } catch (error) {
+    throw error;
+  }
 }
 
 export default getLibrary;
