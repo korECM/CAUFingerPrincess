@@ -54,9 +54,12 @@ class TagButton extends Component {
         "#사범대학"
       ]
     };
+    this.changeColor.bind(this);
+    // 클래스 형 함수는 위에 추가해줘야함!
   }
 
   changeColor(i) {
+    console.log(i);
     this.setState({
       bool: this.state.bool.map((item, index) => (index !== i ? item : !item))
     });
@@ -68,12 +71,14 @@ class TagButton extends Component {
       <button
         className={this.state.bool[i] ? "skyblue" : "roundButton"}
         key={collage}
+        onClick={e => this.changeColor(i)}
       >
-        <div onClick={e => this.changeColor(i)} style={TagTextStyle}>
-          {collage}
-        </div>
+        <div style={TagTextStyle}>{collage}</div>
       </button>
     ));
+
+    // 왜 버튼이 잘 안눌리나 했더니 누르는 함수가 글자 영역만 해당 되어서 그러는겨
+    // 그래서 div에서 버튼으로 onCLick 옮겼음
 
     var container = {
       flex: 1,

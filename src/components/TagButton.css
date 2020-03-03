@@ -24,6 +24,7 @@
   outline: none;
   transition: all 0.2s cubic-bezier(0, 1.26, 0.8, 1.28); */
 }
+
 .skyblue {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -41,6 +42,12 @@
   font: 800;
   box-shadow: 2px 2px 2px 2px gray;
   background-color: skyblue;
+}
+
+.skyblue:hover {
+  color: white;
+  background-color: #92d8f5;
+  border: 1px solid skyblue;
 }
 
 .roundButton:hover {
