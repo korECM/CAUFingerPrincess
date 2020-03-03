@@ -5,6 +5,7 @@ import ChineseDragonSVG from "./svg/chinese-dragon-1738876-1477556";
 import "./components/TagButton.css";
 import TagButton from "./components/TagButton";
 import MainLine from "./components/MainLine";
+import NoticeCard from "./components/CollageNotice";
 
 function App() {
   return (
@@ -67,6 +68,9 @@ function App() {
               <ChineseDragonSVG style={{}} />
               <div>
                 <TagButton />
+              </div>
+              <div>
+                <NoticeCard />
               </div>
             </content>
           </main>
