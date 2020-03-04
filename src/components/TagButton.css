@@ -1,20 +1,17 @@
 .roundButton {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border: none;
   margin-right: -4px;
   margin: 10px;
-  border: 1px solid black;
+  border-radius: 20px;
   background-color: rgba(0, 0, 0, 0);
   color: black;
   padding: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-size: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 15px;
   font-family: Noto Sans CJK KR;
   font: 800;
-  box-shadow: 2px 2px 2px 2px gray;
+  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.08);
   /* background-color: #96d9ff;
   margin-bottom: 20px;
   width: 50px;
@@ -25,26 +22,14 @@
   transition: all 0.2s cubic-bezier(0, 1.26, 0.8, 1.28); */
 }
 
+
+
 .skyblue {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  margin-right: -4px;
-  margin: 10px;
-  border: 1px solid black;
-  color: black;
-  padding: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-size: 20px;
-  font-family: Noto Sans CJK KR;
-  font: 800;
-  box-shadow: 2px 2px 2px 2px gray;
-  background-color: skyblue;
+  background-color: #87ceeb;
+  box-shadow: 0 5px 15px rgba(135, 206, 235, 0.4);
 }
 
-.skyblue:hover {
+.skyblue:hovers {
   color: white;
   background-color: #92d8f5;
   border: 1px solid skyblue;
@@ -53,7 +38,6 @@
 .roundButton:hover {
   color: white;
   background-color: skyblue;
-  border: 1px solid skyblue;
 }
 
 /* #roundButton:active {

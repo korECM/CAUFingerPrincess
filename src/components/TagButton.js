@@ -69,7 +69,7 @@ class TagButton extends Component {
     const { colleges } = this.state;
     const collegeList = colleges.map((collage, i) => (
       <button
-        className={this.state.bool[i] ? "skyblue" : "roundButton"}
+        className={`roundButton yHover ${this.state.bool[i] ? "skyblue" : ""}`}
         key={collage}
         onClick={e => this.changeColor(i)}
         style={{ height: 35, flex: 1 }}

@@ -108,15 +108,14 @@
 }
 
 .yHover {
-  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s, background 0.2s,
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s, background 0.3s,
     border 0.2s;
 }
 
 .yHover:hover {
-  border-radius: 4px;
   position: relative;
   transform: translateY(-3px);
-  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s, background 0.2s,
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s, background 0.3s,
     border 0.2s;
   will-change: transform, box-shadow, opacity;
 }
