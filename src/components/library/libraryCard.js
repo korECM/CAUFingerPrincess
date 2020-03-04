@@ -7,8 +7,7 @@ import getLibrary from "../../lib/parsing/library";
 
 const LibraryCard = () => {
   const LibraryCardContainer = styled.div`
-    width: 270px;
-    max-width: 270px;
+    width : 100%;
     max-height: 220px;
     border-radius: 4px;
     border: 1px solid #eff0f4;

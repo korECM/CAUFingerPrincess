@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./ListItem.scss";
 import LibraryProgressBar from "./LibraryProgressBar";
+import styled from "styled-components";
 
 const LibraryList = ({ lists, loading, error }) => {
   let list = [];
@@ -10,9 +11,9 @@ const LibraryList = ({ lists, loading, error }) => {
       let percent = parseInt((data.use / data.total) * 100);
       return (
         <li className="libraryListItem" key={data.title}>
-          <div >
-            <span >{data.title}</span>
-            <span >
+          <div>
+            <span>{data.title}</span>
+            <span>
               {data.use} / {data.total}
             </span>
           </div>
@@ -21,21 +22,43 @@ const LibraryList = ({ lists, loading, error }) => {
       );
     });
   }
-
   let overflow = loading ? "hidden" : "auto";
 
   return (
     <ul
+      className="libraryListContainer fadeIn"
       style={{
-        backgroundColor: "white",
-        borderRadius: "0 0 0.5rem 0.5rem",
-        maxHeight: "190px",
-        overflow: overflow,
-        width : "100%"
+        overflow: overflow
       }}
     >
       {error && <li>에러 ㅎ</li>}
-      {!error && loading ? <li>로딩중 ㅎ</li> : list}
+      {!error && loading ? (
+        <Fragment>
+          <li>
+            <div
+              className="ui fluid placeholder"
+              style={{ margin: "15px", marginTop: "0px" }}
+            >
+              <div className="line"></div>
+              <div className="line"></div>
+              <div className="line"></div>
+              <div className="line"></div>
+              <div className="line very short"></div>
+            </div>
+          </li>
+          <li>
+            <div
+              className="ui fluid placeholder"
+              style={{ margin: "15px", marginTop: "0px" }}
+            >
+              <div className="line long"></div>
+              <div className="line short"></div>
+            </div>
+          </li>
+        </Fragment>
+      ) : (
+        list
+      )}
     </ul>
   );
 };

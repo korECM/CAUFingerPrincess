@@ -32,10 +32,4 @@ const LibraryProgressBar = ({ percent }) => {
   );
 };
 
-/*
-        <div className="progress" style={{ fontSize: "10px" }}>
-          {percent}%
-        </div>
-*/
-
 export default LibraryProgressBar;
