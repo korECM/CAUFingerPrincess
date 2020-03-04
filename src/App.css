@@ -8,10 +8,23 @@
   padding-left: 20px;
 }
 
+.mainHeader {
+  position: fixed;
+  left: 24px;
+  top: 30px;
+  z-index: 1000;
+}
+
 .header {
   position: fixed;
   top: 30px;
   left: 24px;
+}
+
+.contentHeader {
+  position: relative;
+  width: 100%;
+  height: 235px;
 }
 
 .icon {
@@ -74,14 +87,40 @@
 
 .content {
   display: flex;
+  flex-direction: column;
 }
 
 .gridContent {
   width: 100%;
   height: 100%;
   display: flex;
+  flex: 1;
 }
 
 .gridContent>div {
   margin: 10px 10px;
+}
+
+@media(max-width: 768px) {
+  .navStyle {
+    display: none;
+  }
+
+  .mainStyle {
+    margin-left: 0px;
+  }
+
+  .mainTitle {
+    bottom: 20px;
+    display: none;
+  }
+
+  .mainHeader {
+    margin-top: 8px;
+    margin-right: 8px;
+  }
+
+  .contentHeader {
+    height: 100px;
+  }
 }

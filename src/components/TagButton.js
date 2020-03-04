@@ -72,6 +72,7 @@ class TagButton extends Component {
         className={this.state.bool[i] ? "skyblue" : "roundButton"}
         key={collage}
         onClick={e => this.changeColor(i)}
+        style={{ height: 35, flex: 1 }}
       >
         <div style={TagTextStyle}>{collage}</div>
       </button>
@@ -89,9 +90,7 @@ class TagButton extends Component {
 
     var TagTextStyle = {
       fontSize: 30,
-      marginRight: 50,
-      marginLeft: 50,
-      marginTop: 20
+      flex: 1
     };
 
     return <div style={TagTextStyle}>{collegeList}</div>;
