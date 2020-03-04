@@ -3,7 +3,6 @@ import "./ListItem.scss";
 import LibraryProgressBar from "./LibraryProgressBar";
 
 const LibraryList = ({ lists, loading, error }) => {
-
   let list = [];
 
   if (!error) {
@@ -11,7 +10,12 @@ const LibraryList = ({ lists, loading, error }) => {
       let percent = parseInt((data.use / data.total) * 100);
       return (
         <li className="libraryListItem" key={data.title}>
-          <span>{data.title}</span>
+          <div >
+            <span >{data.title}</span>
+            <span >
+              {data.use} / {data.total}
+            </span>
+          </div>
           <LibraryProgressBar percent={percent} />
         </li>
       );
@@ -26,7 +30,8 @@ const LibraryList = ({ lists, loading, error }) => {
         backgroundColor: "white",
         borderRadius: "0 0 0.5rem 0.5rem",
         maxHeight: "190px",
-        overflow: overflow
+        overflow: overflow,
+        width : "100%"
       }}
     >
       {error && <li>에러 ㅎ</li>}

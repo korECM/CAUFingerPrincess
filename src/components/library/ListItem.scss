@@ -1,16 +1,34 @@
 .libraryListItem {
-  height: 30px;
+  height: 32px;
   line-height: 30px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.libraryListItem>div {
   display: flex;
 }
 
-.libraryListItem>span {
+.libraryListItem>div>span {
   margin-left: 10px;
   font-family: "Noto Sans KR";
   font-weight: lighter;
   font-size: 10px;
   letter-spacing: .5px;
-  width: 60%
+  margin-top: 7.5px;
+  margin-bottom: 3px;
+  line-height: 1;
+}
+
+
+.libraryListItem>div>span:nth-child(1) {
+  flex: 1
+}
+
+.libraryListItem>div>span:nth-child(2) {
+  margin-left: auto;
+  margin-right: 15px;
 }
 
 .libraryListItem>progress {}

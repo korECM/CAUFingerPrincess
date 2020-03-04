@@ -47,7 +47,7 @@ const LibraryCard = () => {
       setLoading(true);
       let index = type.findIndex(data => data);
       const data = await getLibrary(index + 1);
-      console.log(data);
+      console.log("API 호출~");
       if (data.error) {
         setError(true);
       } else {
