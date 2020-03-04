@@ -39,6 +39,7 @@ class TagButton extends Component {
       colleges: [
         "#인문대학",
         "#사회과학대학",
+        "#사범대학",
         "#자연과학대학",
         "#생명공학대학",
         "#공과대학",
@@ -50,8 +51,7 @@ class TagButton extends Component {
         "#적십자간호대학",
         "#예술대학",
         "#예술공학대학",
-        "#체육대학",
-        "#사범대학"
+        "#체육대학"
       ]
     };
     this.changeColor.bind(this);
