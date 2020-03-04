@@ -7,11 +7,11 @@ const LibraryHeader = ({ type, onChange }) => {
       <span
         style={{
           flex: "none",
-          fontSize: "13px",
-          fontWeight: "lighter",
-          marginTop: "8px",
-          marginLeft: "5px",
-          borderRadius: "0.5rem 0.5rem 0 0"
+          fontSize: "12px",
+          fontWeight: "regular",
+          marginTop: "10px",
+          marginLeft: "8px",
+          borderRadius: "4px 4px 0 0"
         }}
       >
         도서관 자리

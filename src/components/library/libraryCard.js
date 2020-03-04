@@ -10,13 +10,13 @@ const LibraryCard = () => {
     width: 270px;
     max-width: 270px;
     max-height: 220px;
-    border-radius: 0.5rem;
+    border-radius: 4px;
     border: 1px solid #eff0f4;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     flex: 1;
     transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s, background 0.2s,
       border 0.2s;
-    &:hoverss {
+    &:hovers {
       border-radius: 4px;
       position: relative;
       transform: translateY(-3px);
