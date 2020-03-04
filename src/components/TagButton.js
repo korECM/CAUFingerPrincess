@@ -90,7 +90,7 @@ class TagButton extends Component {
 
     var TagTextStyle = {
       fontSize: 30,
-      flex: 1
+      flex: 1,
     };
 
     return <div style={TagTextStyle}>{collegeList}</div>;

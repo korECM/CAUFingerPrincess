@@ -7,7 +7,7 @@ import getLibrary from "../../lib/parsing/library";
 
 const LibraryCard = () => {
   const LibraryCardContainer = styled.div`
-    width : 100%;
+    width: 100%;
     max-height: 220px;
     border-radius: 4px;
     border: 1px solid #eff0f4;
@@ -66,4 +66,4 @@ const LibraryCard = () => {
   );
 };
 
-export default LibraryCard;
+export default React.memo(LibraryCard);
