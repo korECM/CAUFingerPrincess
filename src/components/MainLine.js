@@ -7,10 +7,10 @@ import React, { Component } from "react";
 class MainLine extends React.Component {
   render() {
     var lineStyle = {
-      height: 3,
+      height: 1.35,
       width: "100%",
       padding: 0,
-      backgroundColor: "gray"
+      backgroundColor: "rgba(80, 80, 80, 0.15)"
     };
 
     return <div style={lineStyle}></div>;
