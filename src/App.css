@@ -1,5 +1,5 @@
 #container {
-  background-color: #f7fafc;
+  background-color: #f7f8fb;
   font-family: "Noto Sans KR";
 }
 
@@ -82,7 +82,7 @@
 }
 
 .navSubMenu:hover {
-  color: #666666;
+  color: #767676;
 }
 
 .content {
@@ -99,6 +99,20 @@
 
 .gridContent>div {
   margin: 10px 10px;
+}
+
+.yHover {
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s, background 0.2s,
+    border 0.2s;
+}
+
+.yHover:hover {
+  border-radius: 4px;
+  position: relative;
+  transform: translateY(-3px);
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s, background 0.2s,
+    border 0.2s;
+  will-change: transform, box-shadow, opacity;
 }
 
 @media(max-width: 768px) {
