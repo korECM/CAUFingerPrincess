@@ -6,7 +6,7 @@ import LibraryCard from "./components/library/libraryCard";
 import "./components/TagButton.css";
 import TagButton from "./components/TagButton";
 import MainLine from "./components/MainLine";
-import NoticeCard from "./components/CollageNotice";
+import NoticeCard from "./components/collegeNotice/CollageNotice";
 
 function App() {
   return (
@@ -70,10 +70,10 @@ function App() {
               <div style={{ display: "flex", flex: 1 }}>
                 <TagButton />
               </div>
-              <div className="gridContent">
-                <LibraryCard />
-                <NoticeCard />
-              </div>
+            </div>
+            <div className="gridContent">
+              <LibraryCard />
+              <NoticeCard />
             </div>
           </main>
         </div>
