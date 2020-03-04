@@ -7,6 +7,7 @@ import "./components/TagButton.css";
 import TagButton from "./components/TagButton";
 import MainLine from "./components/MainLine";
 import NoticeCard from "./components/collegeNotice/CollageNotice";
+import DateListCard from "./components/collegeNotice/DateListCard";
 
 function App() {
   return (

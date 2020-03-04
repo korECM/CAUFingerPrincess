@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import TagButton from "../../components/TagButton.js";
 import ListCard from "./ListCard.js";
 import TitleCard from "./TitleCard.js";
+import DateListCard from "./DateListCard.js";
 
 class NoticeCard extends React.Component {
   constructor(props) {
@@ -43,6 +43,7 @@ class NoticeCard extends React.Component {
       <div style={cardStyle}>
         <TitleCard />
         <ListCard />
+        <DateListCard />
       </div>
     );
   }
