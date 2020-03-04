@@ -20,7 +20,8 @@ const LibraryProgressBar = ({ percent }) => {
         marginRight: "10px",
         top: "4%",
         backgroundColor: "#E8E8E8",
-        height: "0.25em"
+        height: "0.25em",
+        marginBottom : "0px"
       }}
     >
       <div
