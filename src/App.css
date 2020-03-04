@@ -137,15 +137,23 @@
   .gridContent {
     grid-template-columns: 1fr 1fr;
   }
-}
 
-@media(max-width: 700px) {
-  .gridContent {
-    grid-template-columns: 1fr;
+  .navStyle {
+    width: 190px;
+  }
+
+  .mainStyle {
+    margin-left: 190px;
   }
 }
 
-@media(max-width: 840px) {
+
+@media(max-width: 700px) {
+
+  .gridContent {
+    grid-template-columns: 1fr;
+  }
+
   .navStyle {
     display: none;
   }
