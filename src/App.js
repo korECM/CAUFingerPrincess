@@ -8,6 +8,7 @@ import TagButton from "./components/TagButton";
 import NoticeCard from "./components/collegeNotice/CollageNotice";
 import NavigationBar from "./components/NavigationBar";
 import ContentHeader from "./components/ContentHeader";
+import DateListCard from "./components/collegeNotice/DateListCard";
 
 function App() {
   let [showSideBar, setShowSideBar] = useState(false);

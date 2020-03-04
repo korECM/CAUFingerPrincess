@@ -1,14 +1,11 @@
 import React, { useState, useEffect, useCallback, Component } from "react";
-import TagButton from "../../components/TagButton.js";
+import TagButton from "../TagButton.js";
 import getBne from "../../lib/parsing/bne.js";
 
-const ListCard = () => {
+const DateListCard = () => {
   let [type, setType] = useState([true, false, false]);
-
   let [data, setData] = useState([]);
-
   let [loading, setLoading] = useState(false);
-
   let [error, setError] = useState(false);
 
   const onChange = useCallback(
@@ -20,7 +17,7 @@ const ListCard = () => {
 
   var cardStyle = {
     height: 30,
-    width: 200,
+    width: 100,
     backgroundColor: "#FFF"
   };
 
@@ -48,29 +45,30 @@ const ListCard = () => {
     <div>
       <div style={cardStyle}>
         {sixList.map((notice, i) => {
-          return <TitleInfo title={notice.title} key={i} />;
+          return <DateInfo date={notice.date} key={i} />;
         })}
       </div>
     </div>
   );
 };
 
-class TitleInfo extends React.Component {
+class DateInfo extends React.Component {
   render() {
     var cardStyle = {
       height: 30,
-      width: 200,
+      width: 100,
       backgroundColor: "#FFF",
       display: "inline-block",
       whiteSpace: "nowrap",
       overflow: "hidden",
       textOverflow: "ellipsis",
       padding: 10,
-      fontSize: 10
+      fontSize: 10,
+      marginLeft: 200
     };
 
-    return <div style={cardStyle}>{this.props.title}</div>;
+    return <div style={cardStyle}>{this.props.date}</div>;
   }
 }
 
-export default ListCard;
+export default DateListCard;

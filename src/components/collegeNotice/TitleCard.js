@@ -9,10 +9,13 @@ class TitleCard extends React.Component {
       backgroundColor: "#FF6663",
       borderTopLeftRadius: 5,
       borderTopRightRadius: 5,
-      boxShadow: "0 2px 4px rgba(0,0,0,.15)"
+      boxShadow: "0 2px 4px rgba(0,0,0,.15)",
+      fontSize: 20,
+      color: "#FFFFFF",
+      padding: 25
     };
 
-    return <div style={cardStyle}></div>;
+    return <div style={cardStyle}>#경영경제대학</div>;
   }
 }
 
