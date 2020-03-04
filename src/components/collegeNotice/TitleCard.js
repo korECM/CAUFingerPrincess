@@ -4,15 +4,16 @@ import TagButton from "../../components/TagButton.js";
 class TitleCard extends React.Component {
   render() {
     var cardStyle = {
-      height: 70,
-      width: 300,
+      height: "35px",
+      lineHeight: "35px",
+      width: "100%",
       backgroundColor: "#FF6663",
       borderTopLeftRadius: 5,
       borderTopRightRadius: 5,
-      boxShadow: "0 2px 4px rgba(0,0,0,.15)",
-      fontSize: 20,
+      fontSize: "13px",
       color: "#FFFFFF",
-      padding: 25
+      paddingLeft: 10,
+      fontFamily: "Noto Sans KR"
     };
 
     return <div style={cardStyle}>#경영경제대학</div>;

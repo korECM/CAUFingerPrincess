@@ -42,6 +42,9 @@ function App() {
             <div className="gridContent">
               <LibraryCard />
               <NoticeCard />
+              <NoticeCard />
+              <NoticeCard />
+              <NoticeCard />
             </div>
           </main>
           <NavigationBar show={showSideBar} onBackgroundClick={onClickHamburgerButton}/>

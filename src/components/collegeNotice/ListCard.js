@@ -19,9 +19,10 @@ const ListCard = () => {
   );
 
   var cardStyle = {
-    height: 30,
-    width: 200,
-    backgroundColor: "#FFF"
+    maxHeight: "185px",
+    width: "100%",
+    backgroundColor: "#FFF",
+    overflow: "auto"
   };
 
   useEffect(() => {
@@ -38,20 +39,25 @@ const ListCard = () => {
       }
     };
     load();
-  }, [type]);
-
-  const sixList = data.filter((x, idx, array) => {
-    return idx < 6;
-  });
+  }, []);
 
   return (
-    <div>
-      <div style={cardStyle}>
-        {sixList.map((notice, i) => {
-          return <TitleInfo title={notice.title} key={i} />;
-        })}
-      </div>
-    </div>
+    <ul style={cardStyle}>
+      {data.map((notice, i) => {
+        return (
+          <li style={{ display: "flex" }} key={notice.title}>
+            <span style={{ flex: 1, fontSize: "10px", padding: "8px" }}>
+              {notice.title}
+            </span>
+            <span
+              style={{ marginLeft: "auto", fontSize: "10px", padding: "10px" }}
+            >
+              {notice.date}
+            </span>
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 

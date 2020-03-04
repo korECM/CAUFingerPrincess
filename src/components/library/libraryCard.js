@@ -15,6 +15,7 @@ const LibraryCard = () => {
     flex: 1;
     transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s, background 0.2s,
       border 0.2s;
+    overflow : hidden;
     &:hovers {
       border-radius: 4px;
       position: relative;

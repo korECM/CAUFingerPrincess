@@ -29,8 +29,8 @@ class NoticeCard extends React.Component {
 
   render() {
     var cardStyle = {
-      height: 250,
-      width: 300,
+      maxHeight: 220,
+      width: "100%",
       backgroundColor: "white",
       boxShadow: "0 2px 4px rgba(0,0,0,.15)",
       borderTopLeftRadius: 5,
@@ -43,12 +43,12 @@ class NoticeCard extends React.Component {
       <div style={cardStyle}>
         <TitleCard />
         <ListCard />
-        <DateListCard />
       </div>
     );
   }
 }
 
+// <DateListCard />
 //console.log(TagButton.state.collage);
 
 export default NoticeCard;
