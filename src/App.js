@@ -13,6 +13,7 @@ import DateListCard from "./components/collegeNotice/DateListCard";
 import ChineseDragonSVG from "./svg/chinese-dragon-1738876-1477556";
 import SubwayCard from "./components/subway/SubwayCard";
 import Hive from "./svg/Hive";
+import SchoolCafeteria from "./components/SchoolCafeteria/SchoolCafeteria";
 
 function App() {
   let [showSideBar, setShowSideBar] = useState(false);
@@ -56,6 +57,7 @@ function App() {
               <NoticeCard />
               <NoticeCard />
               <SubwayCard line={7} />
+              <SchoolCafeteria />
             </div>
           </main>
           <NavigationBar

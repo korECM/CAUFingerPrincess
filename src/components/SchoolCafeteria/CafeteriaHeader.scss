@@ -1,0 +1,24 @@
+.cafeteriaHeader {
+  display: flex;
+  flex: 1;
+  background-color: white;
+  //   border-bottom: 0.5pt solid rgba(135, 152, 170, 0.6);
+}
+.cafeteriaHeader span {
+  flex: 1;
+  margin-left: 15px;
+  margin-top: 15px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 35px;
+}
+
+.cafeteriaHeader a {
+  flex: 1;
+  margin-left: 15px;
+  margin-top: 15px;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  line-height: 35px;
+}
