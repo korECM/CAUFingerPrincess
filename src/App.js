@@ -6,6 +6,7 @@ import LibraryCard from "./components/library/libraryCard";
 import "./components/TagButton.css";
 import TagButton from "./components/TagButton";
 import NoticeCard from "./components/collegeNotice/CollageNotice";
+import Linking from "./components/collegeNotice/CollageRoutes";
 import NavigationBar from "./components/NavigationBar";
 import ContentHeader from "./components/ContentHeader";
 import DateListCard from "./components/collegeNotice/DateListCard";
@@ -35,10 +36,14 @@ function App() {
         </header>
         <div className="layout">
           <main className="mainStyle">
-            <ContentHeader show={showSideBar} onClickHamburgerButton={onClickHamburgerButton} />
+            <ContentHeader
+              show={showSideBar}
+              onClickHamburgerButton={onClickHamburgerButton}
+            />
             <div className="content">
               <TagButton />
             </div>
+            <Linking />
             <div className="gridContent">
               <LibraryCard />
               <NoticeCard />
@@ -47,7 +52,10 @@ function App() {
               <NoticeCard />
             </div>
           </main>
-          <NavigationBar show={showSideBar} onBackgroundClick={onClickHamburgerButton}/>
+          <NavigationBar
+            show={showSideBar}
+            onBackgroundClick={onClickHamburgerButton}
+          />
         </div>
       </div>
     </Fragment>
