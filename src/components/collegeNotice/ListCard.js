@@ -56,7 +56,7 @@ const ListCard = () => {
             key={notice.title}
           >
             <a
-              //href={notice.link}
+              href={notice.link}
               style={{ flex: 1, fontSize: "10px", padding: "8px" }}
             >
               {notice.title}
