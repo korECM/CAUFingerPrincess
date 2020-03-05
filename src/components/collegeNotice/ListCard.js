@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, Component } from "react";
 import TagButton from "../../components/TagButton.js";
 import getBne from "../../lib/parsing/bne.js";
+import "./CollageNotice.scss";
 //import { Linking } from "react-native";
 
 const ListCard = () => {
@@ -18,14 +19,6 @@ const ListCard = () => {
     },
     [type]
   );
-
-  var cardStyle = {
-    maxHeight: "185px",
-    width: "100%",
-    backgroundColor: "#FFF",
-    overflow: "auto"
-  };
-
   useEffect(() => {
     const load = async () => {
       setLoading(true);
@@ -42,26 +35,35 @@ const ListCard = () => {
   }, []);
 
   return (
-    <ul style={cardStyle}>
+    <ul className="collageNoticeListWrapper">
       {data.map((notice, i) => {
         return (
           <li
             style={{
-              display: "flex",
-              borderBottomStyle: "solid",
-              borderBottomWidth: "2",
-              borderBottomColor: "#111111"
+              display: "flex"
             }}
             key={notice.title}
           >
             <a
               href={notice.link}
-              style={{ flex: 1, fontSize: "10px", padding: "8px" }}
+              rel="noopener noreferrer"
+              target="_blank"
+              style={{
+                flex: 1,
+                fontSize: "10px",
+                padding: "8px",
+                lineHeight: "14px"
+              }}
             >
               {notice.title}
             </a>
             <span
-              style={{ marginLeft: "auto", fontSize: "10px", padding: "10px" }}
+              style={{
+                marginLeft: "auto",
+                fontSize: "10px",
+                padding: "10px",
+                lineHeight: "14px"
+              }}
             >
               {notice.date}
             </span>
