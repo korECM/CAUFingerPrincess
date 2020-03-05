@@ -35,7 +35,7 @@ function App() {
         </header>
         <div className="layout">
           <main className="mainStyle">
-            <ContentHeader onClickHamburgerButton={onClickHamburgerButton} />
+            <ContentHeader show={showSideBar} onClickHamburgerButton={onClickHamburgerButton} />
             <div className="content">
               <TagButton />
             </div>
