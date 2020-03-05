@@ -1,16 +1,9 @@
 import React from "react";
+import "./chineseDragon.css";
 
 const ChineseDragonSVG = () => {
   return (
-    <div
-      style={{
-        position: "absolute",
-        left: -103,
-        top: 503,
-        zIndex: 0,
-        opacity: 0
-      }}
-    >
+    <div className="chineseDragon">
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"

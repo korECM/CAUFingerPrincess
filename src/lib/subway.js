@@ -10,7 +10,7 @@ const getSubwayInfo = async line => {
     url =
       "http://swopenapi.seoul.go.kr/api/subway/566e7a474e6a65663131387256736642/json/realtimeStationArrival/0/5/%ED%9D%91%EC%84%9D";
   } else {
-    throw new Error("지하철 호선 이상함");
+    throw new Error(`지하철 호선 이상함 ${line}`);
   }
   try {
     let raw = await axios.get(url);

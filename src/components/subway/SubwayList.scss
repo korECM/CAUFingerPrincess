@@ -1,0 +1,93 @@
+.subwayListMessage {
+    border-radius: 0 0 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-size: 10px;
+    margin-left: 12px;
+}
+
+.subwayListMessage div {
+    flex: 1;
+    line-height: 1px;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.subwayListMessage div:nth-child(1) {
+    padding-top: 10px;
+}
+
+.subwayList {
+    height: 100%;
+    max-height: 190px;
+    background-color: white;
+    border-radius: 0 0 4px 4px;
+}
+
+.subwayListWrapper {
+    line-height: 30px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.subwayListWrapper li {
+    height: 30px;
+    max-height: 30px;
+}
+
+.subwayListElementWrapper {
+    display: flex;
+    height: 100%;
+
+}
+
+.subwayListElementWrapper > span:nth-child(2) {
+    flex: 1 1 186px;
+    display : flex;
+}
+
+.subwayDirection {
+    flex: 1 1 100px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.subwayStartEnd {
+    font-size: 13px;
+    padding-left: 10px;
+    background-color: #BCF7CC;
+    border-radius: 5px 5px 0 0;
+}
+
+.subwayStartEndContentParent {
+    display: flex;
+}
+
+.subwayStartEndDirection {
+    font-size: 12px;
+    flex: 1 1 100px;
+    text-align: center;
+}
+
+.subwayStartEndContentWrapper {
+    width: 75%;
+    flex: 1 1 186px;
+    display: flex;
+}
+
+.subwayStartEndContent {
+    font-size: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.subwayStartEndContent span {
+    flex: 1;
+    text-align: center;
+    line-height: 5px;
+    margin-top: 5px;
+}

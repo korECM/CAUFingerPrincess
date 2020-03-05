@@ -29,7 +29,6 @@ const ListCard = () => {
     const load = async () => {
       setLoading(true);
       const data = await getBne();
-      console.log(data);
       if (data.error) {
         setError(true);
       } else {

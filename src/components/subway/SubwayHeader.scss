@@ -1,0 +1,12 @@
+.subwayHeader {
+    display: flex;
+    background-color: white;
+    height: 35px;
+    border-bottom: 0.5pt solid rgba(135, 152, 170, 0.6);
+}
+.subwayHeader span {
+    flex : 1;
+    margin-left : 10px;
+    font-size: 13px;
+    line-height: 35px;
+}
