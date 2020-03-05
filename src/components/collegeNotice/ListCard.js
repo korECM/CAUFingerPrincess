@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, Component } from "react";
 import TagButton from "../../components/TagButton.js";
 import getBne from "../../lib/parsing/bne.js";
+//import { Linking } from "react-native";
 
 const ListCard = () => {
   let [type, setType] = useState([true, false, false]);
@@ -44,10 +45,21 @@ const ListCard = () => {
     <ul style={cardStyle}>
       {data.map((notice, i) => {
         return (
-          <li style={{ display: "flex" }} key={notice.title}>
-            <span style={{ flex: 1, fontSize: "10px", padding: "8px" }}>
+          <li
+            style={{
+              display: "flex",
+              borderBottomStyle: "solid",
+              borderBottomWidth: "2",
+              borderBottomColor: "#111111"
+            }}
+            key={notice.title}
+          >
+            <a
+              href={notice.link}
+              style={{ flex: 1, fontSize: "10px", padding: "8px" }}
+            >
               {notice.title}
-            </span>
+            </a>
             <span
               style={{ marginLeft: "auto", fontSize: "10px", padding: "10px" }}
             >
@@ -64,7 +76,7 @@ class TitleInfo extends React.Component {
   render() {
     var cardStyle = {
       height: 30,
-      width: 200,
+      width: 300,
       backgroundColor: "#FFF",
       display: "inline-block",
       whiteSpace: "nowrap",

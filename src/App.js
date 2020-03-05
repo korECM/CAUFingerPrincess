@@ -6,6 +6,7 @@ import LibraryCard from "./components/library/libraryCard";
 import "./components/TagButton.css";
 import TagButton from "./components/TagButton";
 import NoticeCard from "./components/collegeNotice/CollageNotice";
+import Linking from "./components/collegeNotice/CollageRoutes";
 import NavigationBar from "./components/NavigationBar";
 import ContentHeader from "./components/ContentHeader";
 import DateListCard from "./components/collegeNotice/DateListCard";
@@ -47,6 +48,7 @@ function App() {
             </div>
             <ChineseDragonSVG />
             <Hive />
+            <Linking />
             <div className="gridContent">
               <LibraryCard />
               <NoticeCard />

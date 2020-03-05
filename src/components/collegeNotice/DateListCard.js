@@ -71,4 +71,4 @@ class DateInfo extends React.Component {
   }
 }
 
-export default DateListCard;
+//export default DateListCard;
