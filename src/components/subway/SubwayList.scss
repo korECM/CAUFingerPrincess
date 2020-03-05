@@ -44,9 +44,9 @@
 
 }
 
-.subwayListElementWrapper > span:nth-child(2) {
+.subwayListElementWrapper>span:nth-child(2) {
     flex: 1 1 186px;
-    display : flex;
+    display: flex;
 }
 
 .subwayDirection {
@@ -56,10 +56,32 @@
 }
 
 .subwayStartEnd {
-    font-size: 13px;
-    padding-left: 10px;
+    font-size: 12px;
     background-color: #BCF7CC;
     border-radius: 5px 5px 0 0;
+}
+
+.subwayStartEndContentWrap {
+    display: flex;
+    margin-right: 5px;
+}
+
+.subwayStartEndContentWrap>span:nth-child(1) {
+    flex: 1 1 100px;
+    text-align: center;
+}
+
+.subwayStartEndContentWrap>span:nth-child(2) {
+    flex: 1 1 186px;
+    text-align: center;
+    font-size: 10px;
+    display : flex;
+}
+.subwayStartEndContentWrap>span:nth-child(2) > span {
+    flex : 1;
+}
+.subwayStartEndContentWrap>span:nth-child(2) > span:nth-child(1) {
+    flex : 1;
 }
 
 .subwayStartEndContentParent {

@@ -57,7 +57,16 @@ export default function SubwayList({ line }) {
           <span className="subwayDirection">남성 방향</span>
           <span>{lists.slice(1)}</span>
         </li>
-        <li className="subwayStartEnd">첫차 / 막차 정보</li>
+        <li className="subwayStartEnd">
+          <span className="subwayStartEndContentWrap">
+            <span>첫차 / 막차 정보</span>
+            <span>
+              <span>평일</span>
+              <span>토요일</span>
+              <span>휴일/일요일</span>
+            </span>
+          </span>
+        </li>
         <li className="subwayStartEndContentParent">
           <span className="subwayStartEndDirection">장승배기 방향</span>
           <span className="subwayStartEndContentWrapper">
