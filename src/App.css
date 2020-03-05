@@ -115,7 +115,7 @@
   width: 100%;
   height: 100%;
   position: relative;
-   display: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   flex: 1;
   justify-content: center;
@@ -174,6 +174,8 @@
 
   .gridContent {
     grid-template-columns: 1fr;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .navStyle {
