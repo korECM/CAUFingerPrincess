@@ -1,4 +1,5 @@
 import axios from "axios";
+import axiosRetry from "axios-retry";
 import qs from "querystring";
 
 async function getSchoolSchedule(year, siteNo = 2) {
@@ -7,6 +8,7 @@ async function getSchoolSchedule(year, siteNo = 2) {
 }
 
 function callAPI(year, siteNo = 2) {
+  axiosRetry(axios, { retries: 3 });
   return new Promise((resolve, reject) => {
     axios
       .post(

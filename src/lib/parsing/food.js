@@ -1,4 +1,5 @@
 import axios from "axios";
+import axiosRetry from "axios-retry";
 
 async function getFood(tapNo) {
     const rawData = await callAPI(tapNo);
@@ -7,6 +8,7 @@ async function getFood(tapNo) {
 }
 
 function callAPI(tapNo) {
+    axiosRetry(axios, { retries: 3 });
     return new Promise((resolve, reject) => {
         axios
             .post(`https://mportal.cau.ac.kr/portlet/p005/p005.ajax`, {

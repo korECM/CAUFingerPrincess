@@ -40,7 +40,7 @@ export default function SubwayList({ line }) {
   }, [line]);
 
   let lists = data.map(data => (
-    <span className="subwayListMessage">
+    <span className="subwayListMessage" key={`${data.time}${data.name}`}>
       <div>{data.message}</div>
       <div>{data.time}</div>
     </span>
