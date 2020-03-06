@@ -1,10 +1,10 @@
 import React from "react";
 import "./CafeteriaHeader.scss";
 
-export default function CafeteriaHeader1() {
+export default function CafeteriaHeader2() {
   return (
     <div className="cafeteriaHeader">
-      <span>메뉴판</span>
+      <a>참슬기 식당</a>
     </div>
   );
 }
