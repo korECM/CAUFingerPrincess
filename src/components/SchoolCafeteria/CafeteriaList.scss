@@ -1,0 +1,56 @@
+.cafeteriaList {
+  display: flex;
+  flex: 1;
+  background-color: white;
+  //   border-bottom: 0.5pt solid rgba(135, 152, 170, 0.6);
+}
+.cafeteriaList span {
+  width: 100%;
+  flex: 1;
+  margin-left: 15px;
+  margin-top: 7px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 35px;
+}
+
+.cafeteriaList a {
+  width: 100%;
+  flex: 1;
+  margin-left: 15px;
+  margin-top: 20px;
+  font-size: 11px;
+  color: gray;
+}
+
+.cafeteriaListTime {
+  display: flex;
+  flex: 1;
+  background-color: white;
+  //   border-bottom: 0.5pt solid rgba(135, 152, 170, 0.6);
+}
+
+.cafeteriaListPrice {
+  width: 100%;
+  flex: 1;
+  margin-left: 15px;
+  margin-top: -8px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 35px;
+  color: gray;
+}
+
+.cafeteriaListMenu {
+  display: flex;
+  flex: 1;
+  background-color: white;
+}
+.cafeteriaListMenu span {
+  flex: 1;
+  margin-left: 15px;
+  margin-top: -12px;
+  font-size: 12px;
+  line-height: 35px;
+  color: gray;
+}
