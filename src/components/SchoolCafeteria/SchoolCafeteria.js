@@ -8,11 +8,15 @@ import CafeteriaList from "./CafeteriaList";
 
 const SchoolCafeteria = () => {
   return (
-    <div className="subwayCard">
+    <div className="cafeteriaCard">
       <CafeteriaHeader1 />
       <CafeteriaHeader2 />
       <CafeteriaHeader3 />
       <CafeteriaHeaderLine />
+      <CafeteriaList />
+      <CafeteriaList />
+      <CafeteriaList />
+      <CafeteriaList />
       <CafeteriaList />
     </div>
   );

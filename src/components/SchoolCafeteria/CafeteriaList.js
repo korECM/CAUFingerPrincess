@@ -25,7 +25,7 @@ const CafeteriaListLine = () => {
     display: "flex",
     flex: 1,
     height: 1,
-    marginTop: 0,
+    marginTop: 15,
     marginLeft: 15,
     marginRight: 15,
     padding: 0,
