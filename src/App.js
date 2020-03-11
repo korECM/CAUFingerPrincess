@@ -14,6 +14,8 @@ import ChineseDragonSVG from "./svg/chinese-dragon-1738876-1477556";
 import SubwayCard from "./components/subway/SubwayCard";
 import Hive from "./svg/Hive";
 import SchoolCafeteria from "./components/SchoolCafeteria/SchoolCafeteria";
+import "./star_rate/starindex.css";
+import StarApp from "./star_rate/App";
 
 function App() {
   let [showSideBar, setShowSideBar] = useState(false);

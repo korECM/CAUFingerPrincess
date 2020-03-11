@@ -1,6 +1,8 @@
 import React from "react";
 import "./CafeteriaList.scss";
 import CafeteriaHeader2 from "./CafeteriaHeaderTitle";
+import "../../star_rate/starindex.css";
+import StarApp from "../../star_rate/App";
 
 const CafeteriaItem = () => {
   return (
@@ -35,11 +37,16 @@ const CafeteriaListLine = () => {
   return <div style={lineStyle}></div>;
 };
 
+const CafeterialScope = () => {
+  return;
+};
+
 export default function CafeteriaList() {
   return (
     <div>
       <CafeteriaItem />
       <CafeteriaMenu />
+      <StarApp style={{ marginLeft: 15 }} />
       <CafeteriaListLine />
     </div>
   );
