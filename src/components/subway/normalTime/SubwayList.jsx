@@ -2,29 +2,48 @@ import React, { useEffect, useState, useCallback } from "react";
 import "./SubwayList.scss";
 import { getSubwayInfo } from "../../../lib/subway";
 
-export default function SubwayList({ line }) {
+function SubwayList({ line }) {
   let [lists, setLists] = useState([[], []]);
 
   useEffect(() => {
+    let updateId = null;
     const getData = async line => {
       let result = await getSubwayInfo(line);
       console.log(result);
-      // setData(result.slice(0, 2));
-      apiToUI(result.slice(0, 2));
+      console.log("메인 API 호출", line);
+      clearInterval(updateId);
+      updateId = dataUpdate(result);
     };
     getData(line);
-    let id = setInterval(getData, 100000000, line);
+    let id = setInterval(getData, 30000, line);
     return () => {
       clearInterval(id);
     };
   }, [line]);
 
-  const apiToUI = useCallback(info => {
+  const dataUpdate = useCallback(raw => {
+    let count = 0;
+    const between = () => {
+      apiToUI(raw, count);
+      count = count + 1;
+    };
+
+    let id = setInterval(between, 1000);
+    return id;
+  }, []);
+
+  const apiToUI = useCallback((info, count) => {
     if (info.length === 0) return;
+    console.log("초 업데이트");
+    console.log(count + 1);
     let results = [0, 1].map(index => {
       return info[index].map(data => {
         let date = new Date();
         date.setSeconds(date.getSeconds() + data.time);
+        let secondRaw = data.time >= count ? data.time - count : 0;
+
+        let minute = parseInt(secondRaw / 60);
+        let second = secondRaw - minute * 60;
         return (
           <li
             key={data.message + data.last + data.name}
@@ -34,12 +53,12 @@ export default function SubwayList({ line }) {
               {date.getHours()} : {date.getMinutes()}
             </div>
             <div className="subwayLast">{data.last}</div>
-            <div className="subwayTimeMessage">{data.message}</div>
+            <div className="subwayTimeMessage">{`${minute}분 ${second}초`}</div>
           </li>
         );
       });
     });
-    console.log(results);
+    // console.log(results);
     setLists(results);
   }, []);
 
@@ -59,3 +78,5 @@ export default function SubwayList({ line }) {
     </div>
   );
 }
+
+export default React.memo(SubwayList);

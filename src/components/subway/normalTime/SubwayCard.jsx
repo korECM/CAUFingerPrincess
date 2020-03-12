@@ -4,7 +4,7 @@ import SubwayList from "./SubwayList";
 import SubwayAround from "./SubwayAround";
 import "./SubwayCard.scss";
 
-export default function SubwayCard({ line }) {
+function SubwayCard({ line }) {
   return (
     <div className="subwayCard">
       <SubwayHeader line={line} />
@@ -14,4 +14,5 @@ export default function SubwayCard({ line }) {
   );
 }
 
+export default React.memo(SubwayCard);
 // <SubwayList line={line} />
