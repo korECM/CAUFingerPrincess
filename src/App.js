@@ -9,9 +9,10 @@ import NoticeCard from "./components/collegeNotice/CollageNotice";
 import Linking from "./components/collegeNotice/CollageRoutes";
 import NavigationBar from "./components/NavigationBar";
 import ContentHeader from "./components/ContentHeader";
-import DateListCard from "./components/collegeNotice/DateListCard";
+// import DateListCard from "./components/collegeNotice/DateListCard";
 import ChineseDragonSVG from "./svg/chinese-dragon-1738876-1477556";
 import SubwayCard from "./components/subway/normalTime/SubwayCard";
+import SubwayFirstLastCard from "./components/subway/firstLastTime/SubwayFirstLastCard"
 import Hive from "./svg/Hive";
 import SchoolCafeteria from "./components/SchoolCafeteria/SchoolCafeteria";
 import CafeIndex from "./components/SchoolCafeteria/CafeIndex";
@@ -58,6 +59,8 @@ function App() {
               <NoticeCard />
               <SubwayCard line={7} />
               <SubwayCard line={9} />
+              <SubwayFirstLastCard line={7}/>
+              <SubwayFirstLastCard line={9}/>
               <div className="forCafeIndex">
                 <CafeIndex />
                 <SchoolCafeteria />

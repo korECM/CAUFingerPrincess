@@ -35,19 +35,25 @@ const getFirstLast = line => {
               .find("td")
               .each(function(index, element) {
                 if (index === 0) {
-                  results[0 + offset].push(
-                    $(this)
-                      .find("div > div")
-                      .text()
-                      .trim()
-                  );
+                  $(this)
+                    .find("div > div")
+                    .each(function(index, element) {
+                      results[0 + offset].push(
+                        $(this)
+                          .text()
+                          .trim()
+                      );
+                    });
                 } else {
-                  results[1 + offset].push(
-                    $(this)
-                      .find("div > div")
-                      .text()
-                      .trim()
-                  );
+                  $(this)
+                    .find("div > div")
+                    .each(function(index, element) {
+                      results[1 + offset].push(
+                        $(this)
+                          .text()
+                          .trim()
+                      );
+                    });
                 }
               });
           });
