@@ -34,7 +34,10 @@ export default function SubwayAround({ line }) {
   ];
   let map = [1, 1, 1, 1, 1, 1, 1].map((_, index) => {
     return (
-      <li className="station" key={`${line}${index}`}>
+      <li
+        className={`station ${index === 3 ? "current" : ""}`}
+        key={`${line}${index}`}
+      >
         <span className={`line ${line === 7 ? "seven" : "nine"}`}></span>{" "}
         <i className={`circle ${line === 7 ? "seven" : "nine"}`}></i>
         {data[parseInt(line / 3) - 2][index]}
