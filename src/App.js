@@ -14,6 +14,7 @@ import ChineseDragonSVG from "./svg/chinese-dragon-1738876-1477556";
 import SubwayCard from "./components/subway/SubwayCard";
 import Hive from "./svg/Hive";
 import SchoolCafeteria from "./components/SchoolCafeteria/SchoolCafeteria";
+import CafeIndex from "./components/SchoolCafeteria/CafeIndex";
 import "./star_rate/starindex.css";
 import StarApp from "./star_rate/App";
 
@@ -59,7 +60,10 @@ function App() {
               <NoticeCard />
               <NoticeCard />
               <SubwayCard line={7} />
-              <SchoolCafeteria />
+              <div className = "forCafeIndex">
+                <CafeIndex/>
+                <SchoolCafeteria />
+              </div>
             </div>
           </main>
           <NavigationBar

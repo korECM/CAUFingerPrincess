@@ -1,0 +1,35 @@
+.cafeIndex {
+  border: none;
+  margin-left: 3px;
+  margin-right:0px;
+  margin-top:1px;
+  margin-bottom:1px;
+  width: 24%;
+  height: 70px;
+  line-height: 35px;
+  background-color: #FEFEFE;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding-top: 5px;
+  padding-bottom: 30px;
+  font-size: 10px;
+  color: gray;
+  font-family: Noto Sans KR;
+}
+
+.gray {
+  background-color: #707070;
+  color: white;
+  box-shadow: 0 5px 15px rgba(135, 206, 235, 0.4);
+}
+
+.gray:hovers {
+  color: white;
+  background-color: #707070;
+  border: 1px solid #707070;
+}
+
+.cafeIndex:hovers {
+  color: #ffffff;
+  background-color: #707070;
+}
