@@ -55,7 +55,10 @@ function SubwayList({ line }) {
               className="subwayDetail"
             >
               <div className="subwayTime">
-                {date.getHours()} : {date.getMinutes() > 10 ? date.getMinutes() : `0${date.getMinutes()}`}
+                {date.getHours()} :{" "}
+                {date.getMinutes() > 10
+                  ? date.getMinutes()
+                  : `0${date.getMinutes()}`}
               </div>
               <div className="subwayLast">{data.last}</div>
               <div className="subwayTimeMessage">{`${minute}분 ${second}초`}</div>
@@ -71,7 +74,7 @@ function SubwayList({ line }) {
     <div className="subwayListWrapper">
       {loading && (
         <div
-          class={`ui active centered inline loader ${
+          className={`ui active centered inline loader ${
             line === 7 ? "seven" : "nine"
           }`}
         ></div>
