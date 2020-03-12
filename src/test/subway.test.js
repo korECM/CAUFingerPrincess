@@ -2,20 +2,26 @@ import { getSubwayInfo, getFirstLast } from "../lib/subway";
 
 describe("subway.js", () => {
   describe("getFirstLast 메소드는", () => {
-    describe("각 행의 첫차, 막차 즉 4개를 반환해야 한다.", () => {
+    describe("평일, 휴일, 공휴일 3개의 요소를 가지고 그 속에 각 행의 첫차, 막차 즉 4개를 반환해야 한다.", () => {
       it("7호선", async done => {
         let data = await getFirstLast(7);
-        expect(data).toHaveLength(4);
+        expect(data).toHaveLength(3);
         data.map(e => {
-          expect(e.length > 0).toBe(true);
+          expect(e).toHaveLength(4);
+          e.map(el => {
+            expect(el.length > 0).toBe(true);
+          });
         });
         done();
       }, 10000);
       it("9호선", async done => {
         let data = await getFirstLast(9);
-        expect(data).toHaveLength(4);
+        expect(data).toHaveLength(3);
         data.map(e => {
-          expect(e.length > 0).toBe(true);
+          expect(e).toHaveLength(4);
+          e.map(el => {
+            expect(el.length > 0).toBe(true);
+          });
         });
         done();
       }, 10000);

@@ -5,16 +5,23 @@ import { getSubwayInfo } from "../../../lib/subway";
 function SubwayList({ line }) {
   let [lists, setLists] = useState([[], []]);
   let [loading, setLoading] = useState(true);
+  let [noData, setNoData] = useState(false);
   let [error, setError] = useState(false);
 
   useEffect(() => {
     let updateId = null;
     const getData = async line => {
       let result = await getSubwayInfo(line);
-      console.log(result);
-      console.log("메인 API 호출", line);
+      // console.log(result);
+      if (result.noData) {
+        setNoData(true);
+      } else {
+        result = result.data;
+        clearInterval(updateId);
+        updateId = dataUpdate(result);
+      }
+      // console.log("메인 API 호출", line);
       clearInterval(updateId);
-      updateId = dataUpdate(result);
     };
     getData(line);
     let id = setInterval(getData, 30000, line);
@@ -36,8 +43,8 @@ function SubwayList({ line }) {
 
   const apiToUI = useCallback((info, count) => {
     if (info.length === 0) return;
-    console.log("초 업데이트");
-    console.log(count + 1);
+    // console.log("초 업데이트");
+    // console.log(count + 1);
     let results = [0, 1].map(index => {
       return info[index]
         .filter(data => data.last !== "0" && data.time !== 0)
@@ -72,14 +79,15 @@ function SubwayList({ line }) {
 
   return (
     <div className="subwayListWrapper">
-      {loading && (
+      {noData && "막차 끊김ㅎㅎ 이거 지하철 없는 표시로 바꿔야해"}
+      {!noData && loading && (
         <div
           className={`ui active centered inline loader ${
             line === 7 ? "seven" : "nine"
           }`}
         ></div>
       )}
-      {!loading && (
+      {!noData && !loading && (
         <div className="subwayList">
           <div className="subwayInfo">
             <span>{line === 7 ? "장암행" : "중앙보훈병원행"}</span>
