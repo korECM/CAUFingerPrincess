@@ -14,6 +14,9 @@ import ChineseDragonSVG from "./svg/chinese-dragon-1738876-1477556";
 import SubwayCard from "./components/subway/normalTime/SubwayCard";
 import Hive from "./svg/Hive";
 import SchoolCafeteria from "./components/SchoolCafeteria/SchoolCafeteria";
+import CafeIndex from "./components/SchoolCafeteria/CafeIndex";
+import "./star_rate/starindex.css";
+import StarApp from "./star_rate/App";
 
 function App() {
   let [showSideBar, setShowSideBar] = useState(false);
@@ -55,7 +58,10 @@ function App() {
               <NoticeCard />
               <SubwayCard line={7} />
               <SubwayCard line={9} />
-              <SchoolCafeteria />
+              <div className="forCafeIndex">
+                <CafeIndex />
+                <SchoolCafeteria />
+              </div>
             </div>
           </main>
           <NavigationBar
