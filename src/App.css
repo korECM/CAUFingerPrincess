@@ -127,6 +127,7 @@
 
 .gridContent > div {
   margin: 10px 10px;
+  max-width: 340px;
 }
 
 .yHover {

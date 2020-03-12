@@ -11,7 +11,7 @@ import NavigationBar from "./components/NavigationBar";
 import ContentHeader from "./components/ContentHeader";
 import DateListCard from "./components/collegeNotice/DateListCard";
 import ChineseDragonSVG from "./svg/chinese-dragon-1738876-1477556";
-import SubwayCard from "./components/subway/SubwayCard";
+import SubwayCard from "./components/subway/normalTime/SubwayCard";
 import Hive from "./svg/Hive";
 import SchoolCafeteria from "./components/SchoolCafeteria/SchoolCafeteria";
 
@@ -53,10 +53,8 @@ function App() {
             <div className="gridContent">
               <LibraryCard />
               <NoticeCard />
-              <NoticeCard />
-              <NoticeCard />
-              <NoticeCard />
               <SubwayCard line={7} />
+              <SubwayCard line={9} />
               <SchoolCafeteria />
             </div>
           </main>
