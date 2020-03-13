@@ -43,11 +43,13 @@ describe("subway.js", () => {
       }, 10000);
       it("프로퍼티 name, time, message 다 있다", async done => {
         let data = await getSubwayInfo(7);
-        data.map(e => {
-          expect(e).toHaveProperty("name");
-          expect(e).toHaveProperty("time");
-          expect(e).toHaveProperty("message");
-          expect(e).toHaveProperty("last");
+        data.data.map(e => {
+          e.map(e => {
+            expect(e).toHaveProperty("name");
+            expect(e).toHaveProperty("time");
+            expect(e).toHaveProperty("message");
+            expect(e).toHaveProperty("last");
+          });
         });
         done();
       }, 10000);
@@ -64,11 +66,13 @@ describe("subway.js", () => {
       }, 10000);
       it("프로퍼티 name, time, message 다 있다", async done => {
         let data = await getSubwayInfo(9);
-        data.map(e => {
-          expect(e).toHaveProperty("name");
-          expect(e).toHaveProperty("time");
-          expect(e).toHaveProperty("message");
-          expect(e).toHaveProperty("last");
+        data.data.map(e => {
+          e.map(e => {
+            expect(e).toHaveProperty("name");
+            expect(e).toHaveProperty("time");
+            expect(e).toHaveProperty("message");
+            expect(e).toHaveProperty("last");
+          });
         });
         done();
       }, 10000);

@@ -77,7 +77,6 @@ const getSubwayInfo = async line => {
   try {
     axiosRetry(axios, { retries: 3 });
     let raw = await axios.get(url);
-    // console.log(JSON.parse(raw.data));
     if (
       JSON.parse(raw.data).status === 500 &&
       JSON.parse(raw.data).code === "INFO-200"
@@ -86,7 +85,7 @@ const getSubwayInfo = async line => {
         noData: true
       };
     }
-    result[0] = JSON.parse(raw.data)
+    result.data[0] = JSON.parse(raw.data)
       .realtimeArrivalList.filter(data => data.updnLine === "상행")
       .map(data => {
         let minute = parseInt(parseInt(data.barvlDt) / 60);
@@ -98,7 +97,7 @@ const getSubwayInfo = async line => {
           message: `${minute}분 ${second}초`
         };
       });
-    result[1] = JSON.parse(raw.data)
+    result.data[1] = JSON.parse(raw.data)
       .realtimeArrivalList.filter(data => data.updnLine === "하행")
       .map(data => {
         let minute = parseInt(parseInt(data.barvlDt) / 60);
@@ -110,10 +109,12 @@ const getSubwayInfo = async line => {
           message: `${minute}분 ${second}초`
         };
       });
-    result.sort((a, b) => {
-      return a.time > b.time;
-    });
-    // console.log(result);
+      // console.log(result);
+    result.data.map(data =>
+      data.sort((a, b) => {
+        return a.time > b.time;
+      })
+    );
     return result;
   } catch (error) {
     console.log(error);

@@ -24,20 +24,20 @@ function SubwayList({ line, type }) {
       let result = apiData.current[type.findIndex(value => value)];
       while (result[0].length !== result[1].length) {
         if (result[0].length > result[1].length) {
-          console.log(1);
+          // console.log(1);
           result[1].push("");
         } else {
-          console.log(0);
+          // console.log(0);
           result[0].push("");
         }
       }
       while (result[2].length !== result[3].length) {
         if (result[2].length > result[3].length) {
           result[3].push("");
-          console.log(3);
+          // console.log(3);
         } else {
           result[2].push("");
-          console.log(2);
+          // console.log(2);
         }
       }
       let tempList = result.map(data => {
@@ -58,7 +58,7 @@ function SubwayList({ line, type }) {
           );
         });
       });
-      console.log(tempList);
+      // console.log(tempList);
       setList(tempList);
     },
     [apiData]

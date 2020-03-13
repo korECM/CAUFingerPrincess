@@ -11,17 +11,19 @@ function SubwayList({ line }) {
   useEffect(() => {
     let updateId = null;
     const getData = async line => {
+      console.log("메인 API 호출", line);
+      console.time("메인 API 호출" + line);
       let result = await getSubwayInfo(line);
-      // console.log(result);
-      if (result.noData) {
+      console.timeEnd("메인 API 호출" + line);
+      // console.log("응답 옴", result);
+      if (result.noData === true) {
         setNoData(true);
+        clearInterval(updateId);
       } else {
         result = result.data;
         clearInterval(updateId);
         updateId = dataUpdate(result);
       }
-      // console.log("메인 API 호출", line);
-      clearInterval(updateId);
     };
     getData(line);
     let id = setInterval(getData, 30000, line);
@@ -45,6 +47,7 @@ function SubwayList({ line }) {
     if (info.length === 0) return;
     // console.log("초 업데이트");
     // console.log(count + 1);
+    // console.log(info);
     let results = [0, 1].map(index => {
       return info[index]
         .filter(data => data.last !== "0" && data.time !== 0)
