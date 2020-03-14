@@ -16,11 +16,14 @@ function SubwayList({ line }) {
       let result = await getSubwayInfo(line);
       console.timeEnd("메인 API 호출" + line);
       // console.log("응답 옴", result);
-      if (result.noData === true) {
+      if (result.error) {
+        setError(true);
+      } else if (result.noData === true) {
         setNoData(true);
         clearInterval(updateId);
       } else {
         result = result.data;
+        console.log(result);
         clearInterval(updateId);
         updateId = dataUpdate(result);
       }
@@ -44,6 +47,7 @@ function SubwayList({ line }) {
   }, []);
 
   const apiToUI = useCallback((info, count) => {
+    console.log(info);
     if (info.length === 0) return;
     // console.log("초 업데이트");
     // console.log(count + 1);
@@ -65,7 +69,7 @@ function SubwayList({ line }) {
               className="subwayDetail"
             >
               <div className="subwayTime">
-                {date.getHours()} :{" "}
+                {date.getHours()} :
                 {date.getMinutes() > 10
                   ? date.getMinutes()
                   : `0${date.getMinutes()}`}
@@ -82,15 +86,16 @@ function SubwayList({ line }) {
 
   return (
     <div className="subwayListWrapper">
-      {noData && "막차 끊김ㅎㅎ 이거 지하철 없는 표시로 바꿔야해"}
-      {!noData && loading && (
+      {error && "에러ㅎㅎ"}
+      {!error && noData && "막차 끊김ㅎㅎ 이거 지하철 없는 표시로 바꿔야해"}
+      {!error && !noData && loading && (
         <div
           className={`ui active centered inline loader ${
             line === 7 ? "seven" : "nine"
           }`}
         ></div>
       )}
-      {!noData && !loading && (
+      {!error && !noData && !loading && (
         <div className="subwayList">
           <div className="subwayInfo">
             <span>{line === 7 ? "장암행" : "중앙보훈병원행"}</span>

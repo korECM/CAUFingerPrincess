@@ -77,12 +77,20 @@ const getSubwayInfo = async line => {
   try {
     axiosRetry(axios, { retries: 3 });
     let raw = await axios.get(url);
+    console.log(raw);
     if (
       JSON.parse(raw.data).status === 500 &&
       JSON.parse(raw.data).code === "INFO-200"
     ) {
       return {
         noData: true
+      };
+    } else if (
+      JSON.parse(raw.data).status === 500 &&
+      JSON.parse(raw.data).code === "ERROR-337"
+    ) {
+      return {
+        error: true
       };
     }
     result.data[0] = JSON.parse(raw.data)
@@ -109,7 +117,7 @@ const getSubwayInfo = async line => {
           message: `${minute}분 ${second}초`
         };
       });
-      // console.log(result);
+    // console.log(result);
     result.data.map(data =>
       data.sort((a, b) => {
         return a.time > b.time;
