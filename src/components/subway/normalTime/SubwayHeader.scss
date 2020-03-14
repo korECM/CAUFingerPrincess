@@ -1,0 +1,80 @@
+.subwayHeader {
+    display: flex;
+    height: 100%;
+    flex: 1;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subwayHeaderWrapper {
+    width: 100%;
+    height: 35px;
+    background-color: white;
+    border-bottom: 0.5pt solid rgba(135, 152, 170, 0.6);
+}
+
+.subwayHeader>div {
+    position: relative;
+    flex: 1;
+    font-size: 13px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.subwayHeader>div:nth-child(1) {
+    margin-right: 10px;
+    text-align: right;
+}
+
+.subwayHeader>div:nth-child(2) div {
+    position: absolute;
+    background-color: white;
+    border-radius: 30px;
+    left: 0px;
+    top: 3px;
+    right: 0px;
+    bottom: 3px;
+}
+
+.subwayHeader.seven>div:nth-child(2) div {
+    border: 2.5px solid #646C14;
+}
+
+.subwayHeader.nine>div:nth-child(2) div {
+    border: 2.5px solid #C39E3B;
+}
+
+.subwayHeader>div:nth-child(2) span {
+    position: relative;
+    z-index: 100;
+    height: 100%;
+    font-weight: bold;
+    bottom: 1.5px;
+}
+
+.subwayHeader>div:nth-child(2) span::before {
+    height: 100%;
+    margin-right: 5px;
+    padding: 0 5px;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 10px;
+}
+
+.subwayHeader.seven>div:nth-child(2) span::before {
+    background-color: #646C14;
+    content: "7";
+}
+
+.subwayHeader.nine>div:nth-child(2) span::before {
+    background-color: #C39E3B;
+    content: "9";
+}
+
+.subwayHeader>div:nth-child(3) {
+    margin-left: 10px;
+    text-align: left;
+}

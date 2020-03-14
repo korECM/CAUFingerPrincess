@@ -1,0 +1,410 @@
+#container {
+  background-color: #f7f8fb;
+  font-family: "Noto Sans KR";
+  min-height: 100vh;
+}
+
+.mainStyle {
+  margin-left: 240px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.mainHeader {
+  position: fixed;
+  left: 24px;
+  top: 30px;
+  z-index: 1000;
+}
+
+.mainHeader > span {
+  font-family: "Noto Sans KR";
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header {
+  position: fixed;
+  top: 30px;
+  left: 24px;
+}
+
+.contentHeader {
+  position: relative;
+  width: 100%;
+  height: 235px;
+}
+
+.icon button {
+  display: none;
+}
+
+.icon {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+}
+
+.mainTitle {
+  position: absolute;
+  bottom: 80px;
+  left: 0px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.mainMenu {
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+}
+
+.navStyle {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 240px;
+  height: 100vh;
+  padding: 100px 0px;
+  padding-top: 130px;
+  background-color: white;
+}
+
+.navMenuWrap {
+  padding-left: 24px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  line-height: 28px;
+}
+
+.navSection {
+  color: #9e9fa2;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navSection:hover {
+  color: #bebfc2;
+}
+
+.navSubMenu {
+  font-size: 14px;
+  margin-left: 14px;
+  cursor: pointer;
+}
+
+.navSubMenu:hover {
+  color: #767676;
+}
+
+.mainLine {
+  position: absolute;
+  top: 235px;
+  height: 1.35px;
+  width: 100%;
+  padding: 0;
+  background-color: rgba(80, 80, 80, 0.15);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.gridContent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  flex: 1;
+  justify-content: center;
+  justify-items: center;
+  gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.gridContent > div {
+  margin: 10px 10px;
+  max-width: 340px;
+}
+
+.forCafeIndex {
+  width: 100%;
+  margin: 10px 10px;
+}
+
+.yHover {
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s, background 0.3s,
+    border 0.2s;
+}
+
+.yHover:hover {
+  position: relative;
+  transform: translateY(-3px);
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s, background 0.3s,
+    border 0.2s;
+  will-change: transform, box-shadow, opacity;
+}
+
+@media (max-width: 1800px) {
+  .gridContent {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1300px) {
+  .gridContent {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1023px) {
+  .gridContent {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .navStyle {
+    width: 190px;
+  }
+
+  .mainStyle {
+    margin-left: 190px;
+  }
+}
+
+@media (max-width: 700px) {
+  .gridContent {
+    grid-template-columns: 1fr;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .navStyle {
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 0px;
+    transition: z-index 0.1s 0.3s, opacity 0.3s ease-in-out;
+  }
+
+  .navStyle.showNav {
+    visibility: visible;
+    transition: z-index 0.1s 0s, opacity 0.3s ease-in-out;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .navStyle.hide {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .navMenuWrap {
+    transition: opacity 0.2s 0.3s ease-in-out;
+  }
+
+  .navMenuWrap.hideNavMenuWrap {
+    opacity: 0;
+  }
+
+  .navMenuWrap.showNavMenuWrap {
+    opacity: 1;
+  }
+
+  #hamburger {
+    width: 25px;
+    height: 19px;
+    position: relative;
+    margin: 15px auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+
+  #hamburger span {
+    display: block;
+    position: absolute;
+    height: 2.5px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+
+  /* Icon 3 */
+
+  #hamburger span:nth-child(1) {
+    top: 0px;
+  }
+
+  #hamburger span:nth-child(2),
+  #hamburger span:nth-child(3) {
+    top: 7px;
+  }
+
+  #hamburger span:nth-child(4) {
+    top: 14px;
+  }
+
+  #hamburger.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+  #hamburger.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  #hamburger.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  #hamburger.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+  .mainStyle {
+    margin-left: 0px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mainTitle {
+    bottom: 20px;
+    display: none;
+  }
+
+  .mainHeader {
+    margin-top: 8px;
+    margin-right: 8px;
+    left: 12px;
+    top: 5px;
+  }
+
+  .mainHeader > img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .mainHeader > span {
+    font-size: 25px;
+  }
+
+  .mainLine {
+    top: 50px;
+  }
+
+  .contentHeader {
+    height: 50px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+  .contentHeader > .icon {
+    top: 0px;
+    right: 7px;
+    bottom: 0px;
+  }
+
+  .contentHeader > .icon > img {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 11.5px;
+    margin-right: 8px;
+  }
+
+  .icon > button {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    display: inline;
+  }
+
+  .icon > button > svg {
+    padding-top: 13px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+}
+
+.fadeIn {
+  animation: fadein 0.5s;
+  -moz-animation: fadein 0.5s;
+  /* Firefox */
+  -webkit-animation: fadein 0.5s;
+  /* Safari and Chrome */
+  -o-animation: fadein 0.5s;
+  /* Opera */
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

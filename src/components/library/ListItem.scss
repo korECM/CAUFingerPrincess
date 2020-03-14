@@ -1,0 +1,53 @@
+.libraryListContainer {
+  background-color: white;
+  border-radius: 0 0 0.5rem 0.5rem;
+  max-height: 185px;
+  width: 100%;
+}
+
+
+.libraryListItem {
+  height: 32px;
+  line-height: 30px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.libraryListItem>div {
+  display: flex;
+}
+
+.libraryListItem>div>span {
+  margin-left: 10px;
+  font-family: "Noto Sans KR";
+  font-weight: lighter;
+  font-size: 10px;
+  letter-spacing: .5px;
+  margin-top: 7.5px;
+  margin-bottom: 3px;
+  line-height: 1;
+}
+
+
+.libraryListItem>div>span:nth-child(1) {
+  flex: 1
+}
+
+.libraryListItem>div>span:nth-child(2) {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.libraryListItem>progress {}
+
+.libraryListItem:nth-child(even) {}
+
+.libraryListItem:nth-child(odd) {
+  background-color: rgba($color: (#d5bfaa),
+      $alpha: 0.2);
+}
+
+.libraryListItem:nth-last-child() {
+  border-radius: 0 0 0.5rem 0.5rem;
+}

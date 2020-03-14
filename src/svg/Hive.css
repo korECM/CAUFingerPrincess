@@ -1,0 +1,8 @@
+.hive {
+    position: absolute;
+    opacity: 1;
+    transform: scale(1.5);
+    right: 110px;
+    top: 50px;
+    fill: black;
+}

@@ -1,0 +1,15 @@
+.collageNoticeListWrapper {
+    max-height: 185px;
+    width: 100%;
+    background-color: #FFF;
+    overflow: auto;
+}
+
+.collageNoticeListWrapper>li:nth-child(even) {
+    background-color: rgba(#FF6663, 0.075);
+}
+
+.collageNoticeListWrapper>li:nth-child(odd) {
+    background-color: white;
+    ;
+}
