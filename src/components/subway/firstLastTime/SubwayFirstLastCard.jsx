@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import "./SubwayFirstLastCard.scss";
+import "../../DefaultCard.scss";
 import SubwayHeader from "./SubwayHeader";
 import SubwayList from "./SubwayList";
 
@@ -14,7 +14,7 @@ function SubwayFirstLastCard({ line }) {
   );
 
   return (
-    <div className="subwayCard">
+    <div className="card">
       <SubwayHeader line={line} onChange={onChange} type={type} />
       <SubwayList line={line} type={type} />
     </div>
