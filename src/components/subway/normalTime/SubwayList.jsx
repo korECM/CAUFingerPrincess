@@ -38,7 +38,7 @@ function SubwayList({ line }) {
   const dataUpdate = useCallback(raw => {
     let count = 0;
     const between = () => {
-      apiToUI(raw, count);
+      if (raw) apiToUI(raw, count);
       count = count + 1;
     };
 
