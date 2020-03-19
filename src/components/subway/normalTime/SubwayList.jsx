@@ -15,7 +15,7 @@ function SubwayList({ line }) {
       console.time("메인 API 호출" + line);
       let result = await getSubwayInfo(line);
       console.timeEnd("메인 API 호출" + line);
-      // console.log("응답 옴", result);
+      console.log("응답 옴", result);
       if (result.error) {
         setError(true);
       } else if (result.noData === true) {
