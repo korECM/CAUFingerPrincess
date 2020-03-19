@@ -2,11 +2,12 @@ import axios from "axios";
 import request from "request";
 import cheerio from "cheerio";
 import axiosRetry from "axios-retry";
+import api from "./api";
 
 const getFirstLast = line => {
   return new Promise((resolve, reject) => {
     if (line !== 7 && line !== 9) reject("Invalid Line");
-    let url = `https://wi8cwa01z1.execute-api.ap-northeast-2.amazonaws.com/dev/getSubwayFirstLast/${line}`;
+    let url = api + `/getSubwayFirstLast/${line}`;
     request(url, (error, response, body) => {
       if (error) reject(error);
       let $ = cheerio.load(JSON.parse(body));
@@ -70,7 +71,7 @@ const getSubwayInfo = async line => {
   let url = "";
   let result = { data: [[], []], noData: false };
   if (line === 7 || line === 9) {
-    url = `https://wi8cwa01z1.execute-api.ap-northeast-2.amazonaws.com/dev/getSubway/${line}`;
+    url = api + `/getSubway/${line}`;
   } else {
     throw new Error(`지하철 호선 이상함 ${line}`);
   }
