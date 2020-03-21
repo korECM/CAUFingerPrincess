@@ -32,6 +32,7 @@ function SubwayList({ line }) {
     let id = setInterval(getData, 30000, line);
     return () => {
       clearInterval(id);
+      clearInterval(updateId);
     };
   }, [line]);
 

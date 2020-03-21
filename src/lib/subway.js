@@ -63,6 +63,7 @@ const getFirstLast = line => {
       // });
       // console.log(totalResult);
       // resolve(totalResult);
+      console.log(body);
       resolve(JSON.parse(body));
     });
   });
