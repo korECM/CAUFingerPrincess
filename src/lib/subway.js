@@ -10,62 +10,13 @@ const getFirstLast = line => {
     let url = api + `/getSubwayFirstLast/${line}`;
     request(url, (error, response, body) => {
       if (error) reject(error);
-      if (!body) reject("No Body");
-      // let $ = cheerio.load(JSON.parse(body));
-      // let totalResult = [];
-      // $(".time_table._fl_tab_content").each(function(index, element) {
-      //   let results = [[], [], [], []];
-      //   let flag = true;
-      //   $(this)
-      //     .find("tbody > tr")
-      //     .each(function(index, element) {
-      //       // 처음에 첫차 있으므로 true로 먼저 설정
-      //       if (
-      //         $(this)
-      //           .find("th")
-      //           .text().length > 0
-      //       ) {
-      //         flag = !flag;
-      //       }
-      //       let offset = 0;
-      //       if (flag) {
-      //         offset = 2;
-      //       } else {
-      //         offset = 0;
-      //       }
-      //       $(this)
-      //         .find("td")
-      //         .each(function(index, element) {
-      //           if (index === 0) {
-      //             $(this)
-      //               .find("div > div")
-      //               .each(function(index, element) {
-      //                 results[0 + offset].push(
-      //                   $(this)
-      //                     .text()
-      //                     .trim()
-      //                 );
-      //               });
-      //           } else {
-      //             $(this)
-      //               .find("div > div")
-      //               .each(function(index, element) {
-      //                 results[1 + offset].push(
-      //                   $(this)
-      //                     .text()
-      //                     .trim()
-      //                 );
-      //               });
-      //           }
-      //         });
-      //     });
-      //   // results = results.filter(data => data.length > 0);
-      //   totalResult.push(results);
-      // });
-      // console.log(totalResult);
-      // resolve(totalResult);
-      //console.log(body);
-      resolve(JSON.parse(body));
+      if (!body || typeof body === "undefined") reject("No Body");
+      console.log(body);
+      try {
+        resolve(JSON.parse(body));
+      } catch (error) {
+        return {};
+      }
     });
   });
 };
