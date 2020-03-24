@@ -56,7 +56,10 @@ function SNS() {
 
       <div className="snsCard">
         <div className="content2">
-          <div className="square" style={{ backgroundColor: "#559955" }}></div>
+          <div
+            className="square"
+            style={{ backgroundColor: "black" /*#559955*/ }}
+          ></div>
         </div>
         <div className="content">
           <div className="titleCard">
