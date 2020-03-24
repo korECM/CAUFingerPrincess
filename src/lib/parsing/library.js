@@ -4,6 +4,7 @@ import api from "../api";
 async function getLibrary(tapNo) {
   try {
     const rawData = await callAPI(tapNo);
+    console.log(rawData);
     return parseData(rawData);
   } catch (error) {
     return {
@@ -15,10 +16,10 @@ async function getLibrary(tapNo) {
 function parseData(data) {
   return data.map(e => {
     return {
-      title: e.roomName,
-      total: e.totalCnt,
-      use: e.useCnt,
-      remain: e.remainCnt
+      title: e.rN,
+      total: e.tC,
+      use: e.uC,
+      remain: e.rC
     };
   });
 }
@@ -27,7 +28,7 @@ async function callAPI(tabNo) {
   axiosRetry(axios, { retries: 3 });
   try {
     let res = await axios.get(api + `/getLibrary/${tabNo}`);
-    return JSON.parse(res.data).gridData;
+    return res.data;
   } catch (error) {
     throw error;
   }
