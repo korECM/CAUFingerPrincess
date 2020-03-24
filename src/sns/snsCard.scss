@@ -1,5 +1,96 @@
 .snsCard {
+  width: 98%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: flex;
+  background-color: white;
+  //max-height: 220px;
+  border-radius: 4px;
+  border: 1px solid #eff0f4;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s, background 0.2s,
+    border 0.2s;
+  overflow: hidden;
+}
+
+.snsCard a {
+  margin: 15px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.snsCard span {
+  color: gray;
+  margin: 15px;
+  margin-top: 30px;
+  padding-top: 30px;
+  font-size: 15px;
+}
+
+.titleCard {
   width: 100%;
+  height: flex;
+  flex: 1;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 10px;
+  padding-right: 30px;
+  color: #4267b2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.categoryCard {
+  width: 100%;
+  height: flex;
+  flex: 1;
+  margin-top: 7px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+
+.square {
+  padding: 30px;
+  width: 100%;
+  height: flex;
+  flex: 1;
+  //   background-color: black;
+}
+
+.content2 {
+  width: 10%;
+  float: left;
+}
+
+.content {
+  width: 90%;
+  float: right;
+}
+
+.seoulAll {
+  width: 90%;
+  margin-top: 10px;
+  height: flex;
+  background-color: white;
+  //max-height: 220px;
+  border-radius: 4px;
+  border: 1px solid #eff0f4;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s, background 0.2s,
+    border 0.2s;
+  overflow: hidden;
+}
+
+.boardCard {
+  width: 97%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 70px;
   height: flex;
   background-color: white;
   //max-height: 220px;

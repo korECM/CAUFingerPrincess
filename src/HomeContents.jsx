@@ -39,7 +39,6 @@ function HomeContents(props) {
           <CafeIndex />
           <SchoolCafeteria />
         </div>
-        <SNS />
       </div>
     </Fragment>
   );
