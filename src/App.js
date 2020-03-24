@@ -2,7 +2,7 @@ import React, { Fragment, useState, useCallback } from "react";
 import GlobalStyles from "./components/GlobalStyles";
 import MainLayout from "./MainLayout";
 import "./App.css";
-
+import SNS from "./sns/SNS";
 import "./star_rate/starindex.css";
 
 import HomeContents from "./HomeContents";
@@ -33,6 +33,7 @@ function App() {
               />
             )}
           />
+
           <Route path="/inDoor" component={() => <div>Indoor</div>} />
         </MainLayout>
       </Router>
@@ -41,3 +42,8 @@ function App() {
 }
 
 export default App;
+<<<<<<< Updated upstream
+=======
+
+//<Route path="/SNS" component={() => <SNS/>} />
+>>>>>>> Stashed changes

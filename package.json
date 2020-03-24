@@ -1,5 +1,5 @@
 {
-  "name": "web-notice-frontend",
+  "name": "my-package",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -84,9 +84,9 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "jest"
+    "build": "babel src -d lib",
+    "test": "jest",
+    "start": "node scripts/start.js"
   },
   "eslintConfig": {
     "extends": "react-app"
