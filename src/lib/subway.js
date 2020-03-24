@@ -10,6 +10,7 @@ const getFirstLast = line => {
     let url = api + `/getSubwayFirstLast/${line}`;
     request(url, (error, response, body) => {
       if (error) reject(error);
+      if (!body) reject("No Body");
       // let $ = cheerio.load(JSON.parse(body));
       // let totalResult = [];
       // $(".time_table._fl_tab_content").each(function(index, element) {
