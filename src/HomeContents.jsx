@@ -12,7 +12,9 @@ import SubwayFirstLastCard from "./components/subway/firstLastTime/SubwayFirstLa
 
 import SchoolCafeteria from "./components/SchoolCafeteria/SchoolCafeteria";
 import CafeIndex from "./components/SchoolCafeteria/CafeIndex";
-import BusCard from "./components/bus/BusCard";
+
+import SNS from "../src/sns/SNS";
+// import BusCard from "./components/bus/BusCard";
 
 function HomeContents(props) {
   const { showSideBar, onClickHamburgerButton } = props;
@@ -37,10 +39,12 @@ function HomeContents(props) {
           <CafeIndex />
           <SchoolCafeteria />
         </div>
-        <BusCard />
+        <SNS />
       </div>
     </Fragment>
   );
 }
 
 export default HomeContents;
+
+//<BusCard />
