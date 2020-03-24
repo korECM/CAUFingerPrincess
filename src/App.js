@@ -6,6 +6,7 @@ import SNS from "./sns/SNS";
 import "./star_rate/starindex.css";
 
 import HomeContents from "./HomeContents";
+import BrowserRouter from "react-router/BrowserRouter";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
   return (
     <Fragment>
       <GlobalStyles />
-      <Router>
+      <BrowserRouter>
         <MainLayout
           showSideBar={showSideBar}
           onClickHamburgerButton={onClickHamburgerButton}
@@ -33,17 +34,12 @@ function App() {
               />
             )}
           />
-
-          <Route path="/inDoor" component={() => <div>Indoor</div>} />
+          <Route path="SNS" component={() => <SNS />} />
+          <Route path="inDoor" component={() => <div>Indoor</div>} />
         </MainLayout>
-      </Router>
+      </BrowserRouter>
     </Fragment>
   );
 }
 
 export default App;
-<<<<<<< Updated upstream
-=======
-
-//<Route path="/SNS" component={() => <SNS/>} />
->>>>>>> Stashed changes

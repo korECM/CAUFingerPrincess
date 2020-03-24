@@ -26,7 +26,7 @@ export default function NavigationBar({ show, onBackgroundClick }) {
         >
           <li className="navSection yHover">학교 주변 정보</li>
           <li className="navSubMenu yHover">
-            <Link to="/inDoor">교내 시설 일단 이거만 추가</Link>
+            <Link to="inDoor">교내 시설 일단 이거만 추가</Link>
           </li>
           <li className="navSubMenu yHover">강의 평</li>
           <li className="navSubMenu yHover">셔틀 버스 노선</li>
@@ -51,11 +51,11 @@ export default function NavigationBar({ show, onBackgroundClick }) {
           <li className="navSubMenu yHover">졸업 요건 및 이수 체계도</li>
           <li className="navSubMenu yHover">학교 연락망</li>
           <li className="navSubMenu yHover">
-            <NavLink to="/SNS">교내 SNS 모음</NavLink>
+            <Link to="SNS">교내 SNS 모음</Link>
           </li>
         </ul>
         <div className="content">
-          <Route path="/SNS" component={SNS} />
+          <Route path="SNS" component={SNS} />
         </div>
       </nav>
     </HashRouter>
