@@ -2,6 +2,9 @@
   "name": "my-package",
   "version": "0.1.0",
   "private": true,
+  "resolutions": {
+    "@babel/preset-env": "7.5.5"
+  },
   "dependencies": {
     "@babel/preset-typescript": "^7.8.3",
     "@crello/react-lottie": "^0.0.9",
