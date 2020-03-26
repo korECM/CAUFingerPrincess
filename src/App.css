@@ -4,6 +4,10 @@
   min-height: 100vh;
 }
 
+a {
+  color: inherit !important;
+}
+
 .mainStyle {
   margin-left: 240px;
   padding-left: 20px;
@@ -148,9 +152,20 @@
   will-change: transform, box-shadow, opacity;
 }
 
+#calendar {
+  /* margin-top: 235px; */
+
+  position: absolute;
+  padding: 0 10px;
+  left: 250px;
+  right: 0;
+  bottom: 5px;
+  top: 235px;
+}
+
 @media (max-width: 1800px) {
   .gridContent {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -175,6 +190,11 @@
 }
 
 @media (max-width: 700px) {
+  #calendar {
+    left: 0px;
+    top: 70px;
+  }
+
   .gridContent {
     grid-template-columns: 1fr;
     padding-left: 50px;

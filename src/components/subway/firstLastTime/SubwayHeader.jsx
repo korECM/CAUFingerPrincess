@@ -1,9 +1,10 @@
 import React from "react";
 import "./SubwayHeader.scss";
+import "../../DefaultCard.scss";
 
 function SubwayHeader({ line, type, onChange }) {
   return (
-    <div className="subwayFirstLastHeader">
+    <div className="subwayFirstLastHeader cardHeader">
       <span>{line === 7 ? "상도" : "흑석"}역 첫차 / 막차</span>
       <div className="segmented-control">
         <input

@@ -12,14 +12,14 @@ describe("bne.js의 makePostRequest는", () => {
     done();
   });
 
-  it("성공적으로 데이터를 불러오지 못하면 에러를 발생시킨다", () => {
-    const axiosMock = {};
-    axiosMock.post = () => {
-      return new Promise((resolve, reject) => {
-        reject();
-      });
-    };
-    const api = new bneAPI(axiosMock);
-    expect(() => api.getBne().toThrow());
-  });
+  // it("성공적으로 데이터를 불러오지 못하면 에러를 발생시킨다", () => {
+  //   const axiosMock = {};
+  //   axiosMock.post = () => {
+  //     return new Promise((resolve, reject) => {
+  //       reject();
+  //     });
+  //   };
+  //   const api = new bneAPI(axiosMock);
+  //   expect(() => api.getBne().toThrow());
+  // });
 });

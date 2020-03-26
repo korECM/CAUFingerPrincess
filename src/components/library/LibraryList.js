@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import "./ListItem.scss";
 import LibraryProgressBar from "./LibraryProgressBar";
-import styled from "styled-components";
+import ErrorAnimation from "../../useful/error/error";
 
 const LibraryList = ({ lists, loading, error }) => {
   let list = [];
@@ -31,7 +31,11 @@ const LibraryList = ({ lists, loading, error }) => {
         overflow: overflow
       }}
     >
-      {error && <li>에러 ㅎ</li>}
+      {error && (
+        <li>
+          <ErrorAnimation />
+        </li>
+      )}
       {!error && loading ? (
         <Fragment>
           <li>

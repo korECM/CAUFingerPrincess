@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import "./SubwayList.scss";
 import { getSubwayInfo } from "../../../lib/subway";
+import ErrorAnimation from "../../../useful/error/error";
 
 function SubwayList({ line }) {
   let [lists, setLists] = useState([[], []]);
@@ -15,7 +16,7 @@ function SubwayList({ line }) {
       console.time("메인 API 호출" + line);
       let result = await getSubwayInfo(line);
       console.timeEnd("메인 API 호출" + line);
-      // console.log("응답 옴", result);
+      console.log("응답 옴", result);
       if (result.error) {
         setError(true);
       } else if (result.noData === true) {
@@ -32,13 +33,14 @@ function SubwayList({ line }) {
     let id = setInterval(getData, 30000, line);
     return () => {
       clearInterval(id);
+      clearInterval(updateId);
     };
   }, [line]);
 
   const dataUpdate = useCallback(raw => {
     let count = 0;
     const between = () => {
-      apiToUI(raw, count);
+      if (raw) apiToUI(raw, count);
       count = count + 1;
     };
 
@@ -49,9 +51,7 @@ function SubwayList({ line }) {
   const apiToUI = useCallback((info, count) => {
     console.log(info);
     if (info.length === 0) return;
-    // console.log("초 업데이트");
-    // console.log(count + 1);
-    // console.log(info);
+
     let results = [0, 1].map(index => {
       return info[index]
         .filter(data => data.last !== "0" && data.time !== 0)
@@ -80,13 +80,12 @@ function SubwayList({ line }) {
           );
         });
     });
-    // console.log(results);
     setLists(results);
   }, []);
 
   return (
     <div className="subwayListWrapper">
-      {error && "에러ㅎㅎ"}
+      {error && <ErrorAnimation />}
       {!error && noData && "막차 끊김ㅎㅎ 이거 지하철 없는 표시로 바꿔야해"}
       {!error && !noData && loading && (
         <div

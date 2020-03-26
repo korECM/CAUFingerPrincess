@@ -1,10 +1,11 @@
 import axios from "axios";
 import axiosRetry from "axios-retry";
+import api from "./api";
 
 const getBusInfo = async id => {
   let url = "";
   let result = { data: [], noData: false };
-  url = `https://wi8cwa01z1.execute-api.ap-northeast-2.amazonaws.com/dev/getBus/${id}`;
+  url = api + `/getBus/${id}`;
   try {
     axiosRetry(axios, { retries: 3 });
     let raw = await axios.get(url);

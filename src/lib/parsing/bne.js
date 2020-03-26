@@ -1,8 +1,13 @@
 import axios from "axios";
 import axiosRetry from "axios-retry";
+import api from "../api";
 async function getBne() {
-  const rawData = await callAPI();
-  return parseData(rawData);
+  try {
+    const rawData = await callAPI();
+    return parseData(rawData);
+  } catch (error) {
+    return { error };
+  }
 }
 
 function parseData(data) {
@@ -17,9 +22,7 @@ function parseData(data) {
 
 async function callAPI() {
   axiosRetry(axios, { retries: 3 });
-  let res = await axios.get(
-    "https://wi8cwa01z1.execute-api.ap-northeast-2.amazonaws.com/dev/readBneNotice"
-  );
+  let res = await axios.get(api + "/readBneNotice");
   return res.data;
 }
 
