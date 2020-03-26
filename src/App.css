@@ -130,7 +130,6 @@ a {
 }
 
 .gridContent > div {
-  margin: 10px 10px;
   max-width: 340px;
 }
 
@@ -197,8 +196,6 @@ a {
 
   .gridContent {
     grid-template-columns: 1fr;
-    padding-left: 50px;
-    padding-right: 50px;
   }
 
   .navStyle {
