@@ -6,7 +6,7 @@ import SNS from "./sns/SNS";
 import "./star_rate/starindex.css";
 
 import HomeContents from "./HomeContents";
-import BrowserRouter from "react-router/BrowserRouter";
+import Calendar from "./components/calendar/Calendar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
   return (
     <Fragment>
       <GlobalStyles />
-      <BrowserRouter>
+      <Router>
         <MainLayout
           showSideBar={showSideBar}
           onClickHamburgerButton={onClickHamburgerButton}
@@ -34,10 +34,11 @@ function App() {
               />
             )}
           />
-          <Route path="SNS" component={() => <SNS />} />
-          <Route path="inDoor" component={() => <div>Indoor</div>} />
+          <Route path="/SNS" component={() => <SNS />} />
+          <Route path="/inDoor" component={() => <div>Indoor</div>} />
+          <Route path="/schedule" component={Calendar} />
         </MainLayout>
-      </BrowserRouter>
+      </Router>
     </Fragment>
   );
 }
