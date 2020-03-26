@@ -15,7 +15,7 @@ const getFirstLast = line => {
       try {
         resolve(JSON.parse(body));
       } catch (error) {
-        return {};
+        return { error };
       }
     });
   });
@@ -76,7 +76,7 @@ const getSubwayInfo = async line => {
     return result;
   } catch (error) {
     console.log(error);
-    return {};
+    return { error };
   }
 };
 

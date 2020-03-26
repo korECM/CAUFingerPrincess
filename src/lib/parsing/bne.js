@@ -2,8 +2,12 @@ import axios from "axios";
 import axiosRetry from "axios-retry";
 import api from "../api";
 async function getBne() {
-  const rawData = await callAPI();
-  return parseData(rawData);
+  try {
+    const rawData = await callAPI();
+    return parseData(rawData);
+  } catch (error) {
+    return { error };
+  }
 }
 
 function parseData(data) {

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, Fragment } from "react";
 import TagButton from "../../components/TagButton.js";
 import getBne from "../../lib/parsing/bne.js";
 import "./CollageNotice.scss";
+import ErrorAnimation from "../../useful/error/error"
 //import { Linking } from "react-native";
 
 const ListCard = () => {
@@ -36,7 +37,7 @@ const ListCard = () => {
 
   return (
     <ul className="collageNoticeListWrapper">
-      {error && <li>에러 ㅎ</li>}
+      {error && <li><ErrorAnimation/></li>}
       {!error && loading ? (
         <Fragment>
           <li>
