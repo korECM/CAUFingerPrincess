@@ -1,7 +1,7 @@
 import React from "react";
-import "./snsCard.scss";
+import "./SnsCard.scss";
 
-export default function snsCard() {
+export default function SnsCard() {
   return <div className="snsCard">????</div>;
 }
 // <a class="" href="/profile.php?id=639655309476757&amp;ref=br_rs">
