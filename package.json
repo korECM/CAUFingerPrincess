@@ -2,6 +2,9 @@
   "name": "my-package",
   "version": "0.1.0",
   "private": true,
+  "resolutions": {
+    "@babel/preset-env": "7.5.5"
+  },
   "dependencies": {
     "@babel/preset-typescript": "^7.8.3",
     "@crello/react-lottie": "^0.0.9",
@@ -86,7 +89,7 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
-    "build": "babel src -d lib",
+    "build": "node scripts/build.js",
     "test": "jest",
     "start": "node scripts/start.js"
   },
