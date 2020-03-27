@@ -78,7 +78,7 @@ const CalendarUI = () => {
   }, [calendarRef]);
 
   return (
-    <div>
+    <div className="calendarWrapper">
       {error ? (
         <ErrorAnimation height={300} width={300} />
       ) : (
@@ -155,6 +155,7 @@ const CalendarUI = () => {
               disableDblClick={true}
               disableClick={false}
               isReadOnly={true}
+              useDetailPopup
               month={{
                 startDayOfWeek: 0
               }}
