@@ -21,7 +21,7 @@ a {
   z-index: 1000;
 }
 
-.mainHeader > span {
+.mainHeader>span {
   font-family: "Noto Sans KR";
   font-size: 30px;
   font-weight: bold;
@@ -129,8 +129,7 @@ a {
   padding-right: 10px;
 }
 
-.gridContent > div {
-  margin: 10px 10px;
+.gridContent>div {
   max-width: 340px;
 }
 
@@ -190,15 +189,20 @@ a {
 }
 
 @media (max-width: 700px) {
+
+  .calendarWrapper {}
+
+  #container>div>main>div>div>div:nth-child(1) {
+    margin-top: 60px !important;
+  }
+
   #calendar {
     left: 0px;
-    top: 70px;
+    top: 170px;
   }
 
   .gridContent {
     grid-template-columns: 1fr;
-    padding-left: 50px;
-    padding-right: 50px;
   }
 
   .navStyle {
@@ -326,12 +330,12 @@ a {
     top: 5px;
   }
 
-  .mainHeader > img {
+  .mainHeader>img {
     width: 25px;
     height: 25px;
   }
 
-  .mainHeader > span {
+  .mainHeader>span {
     font-size: 25px;
   }
 
@@ -349,27 +353,27 @@ a {
     z-index: 100;
   }
 
-  .contentHeader > .icon {
+  .contentHeader>.icon {
     top: 0px;
     right: 7px;
     bottom: 0px;
   }
 
-  .contentHeader > .icon > img {
+  .contentHeader>.icon>img {
     width: 25px;
     height: 25px;
     margin-bottom: 11.5px;
     margin-right: 8px;
   }
 
-  .icon > button {
+  .icon>button {
     height: 100%;
     background-color: transparent;
     border: none;
     display: inline;
   }
 
-  .icon > button > svg {
+  .icon>button>svg {
     padding-top: 13px;
     margin-right: 3px;
     margin-bottom: 5px;
@@ -397,6 +401,7 @@ a {
 }
 
 @-moz-keyframes fadein {
+
   /* Firefox */
   from {
     opacity: 0;
@@ -408,6 +413,7 @@ a {
 }
 
 @-webkit-keyframes fadein {
+
   /* Safari and Chrome */
   from {
     opacity: 0;
@@ -419,6 +425,7 @@ a {
 }
 
 @-o-keyframes fadein {
+
   /* Opera */
   from {
     opacity: 0;
