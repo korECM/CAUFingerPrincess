@@ -10,12 +10,14 @@ const defaultOptions = {
   }
 };
 
-export default function ErrorAnimation() {
+export default function ErrorAnimation({ width, height }) {
+  if (!width) width = 100;
+  if (!height) height = 100;
   return (
     <div>
       <Lottie
-        width="100px"
-        height="100px"
+        width={`${width}px`}
+        height={`${height}px`}
         style={{ margin: "0 auto", marginTop: "10px" }}
         config={{
           animationData: animationData,
