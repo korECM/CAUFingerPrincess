@@ -1,28 +1,28 @@
 import axios from "axios";
 import axiosRetry from "axios-retry";
 import qs from "querystring";
+import api from "../api";
 
 async function getSchoolSchedule(year, siteNo = 2) {
-  const rawData = await callAPI(year, siteNo);
-  return parseData(rawData);
+  try {
+    const rawData = await callAPI(year, siteNo);
+    return parseData(rawData);
+  } catch (error) {
+    throw new Error("API Error");
+  }
 }
 
 function callAPI(year, siteNo = 2) {
   axiosRetry(axios, { retries: 3 });
   return new Promise((resolve, reject) => {
     axios
-      .post(
-        `https://www.cau.ac.kr/ajax/FR_SCH_SVC/ScheduleListData.do`,
-        qs.stringify({
-          SCH_YEAR: `${year}`,
-          SCH_SITE_NO: `${siteNo}`
-        })
-      )
+      .get(api + `/getSchoolSchedule/${year}`)
       .then(response => {
         resolve(response.data.data);
       })
       .catch(error => {
-        throw error;
+        console.error(error);
+        reject(error);
       });
   });
 }

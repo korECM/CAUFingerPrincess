@@ -15,6 +15,7 @@ describe("schoolSchedule.js는", () => {
         expect(e.end).toHaveProperty("month");
         expect(e.end).toHaveProperty("day");
       });
+      console.log(data);
       done();
     }, 10000);
   });
