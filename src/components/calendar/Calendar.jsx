@@ -87,7 +87,6 @@ const CalendarUI = () => {
             style={{
               display: "table",
               margin: "0 auto",
-              marginTop: "100px",
               fontSize: "30px",
               fontWeight: "bold"
             }}

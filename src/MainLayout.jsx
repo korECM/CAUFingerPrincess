@@ -1,6 +1,7 @@
 import React from "react";
 import NavigationBar from "./components/NavigationBar";
 import { Link } from "react-router-dom";
+import ContentHeader from "./components/ContentHeader";
 
 function MainLayout(props) {
   const { showSideBar, onClickHamburgerButton } = props;
@@ -19,6 +20,10 @@ function MainLayout(props) {
           </span>
         </Link>
       </header>
+      <ContentHeader
+        show={showSideBar}
+        onClickHamburgerButton={onClickHamburgerButton}
+      />
       <div className="layout">
         <main className="mainStyle">{props.children}</main>
         <NavigationBar
