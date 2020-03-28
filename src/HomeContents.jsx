@@ -4,8 +4,6 @@ import LibraryCard from "./components/library/libraryCard";
 import TagButton from "./components/TagButton";
 import NoticeCard from "./components/collegeNotice/CollageNotice";
 
-import ContentHeader from "./components/ContentHeader";
-
 import ChineseDragonSVG from "./svg/chinese-dragon-1738876-1477556";
 import SubwayCard from "./components/subway/normalTime/SubwayCard";
 import SubwayFirstLastCard from "./components/subway/firstLastTime/SubwayFirstLastCard";
@@ -13,17 +11,10 @@ import SubwayFirstLastCard from "./components/subway/firstLastTime/SubwayFirstLa
 import SchoolCafeteria from "./components/SchoolCafeteria/SchoolCafeteria";
 import CafeIndex from "./components/SchoolCafeteria/CafeIndex";
 
-import SNS from "../src/sns/SNS";
-// import BusCard from "./components/bus/BusCard";
-
 function HomeContents(props) {
   const { showSideBar, onClickHamburgerButton } = props;
   return (
     <Fragment>
-      <ContentHeader
-        show={showSideBar}
-        onClickHamburgerButton={onClickHamburgerButton}
-      />
       <div className="content">
         <TagButton />
       </div>
