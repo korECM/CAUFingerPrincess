@@ -1,4 +1,11 @@
-import React, { Fragment, useState, useCallback, lazy, Suspense } from "react";
+import React, {
+  Fragment,
+  useState,
+  useCallback,
+  lazy,
+  Suspense,
+  useEffect
+} from "react";
 import GlobalStyles from "./components/GlobalStyles";
 import MainLayout from "./MainLayout";
 import "./App.css";
@@ -14,12 +21,20 @@ import "semantic-ui-css/semantic.min.css";
 const Calendar = lazy(() => import("./components/calendar/Calendar"));
 const SNS = lazy(() => import("./sns/SNS"));
 
+const semanticCss = import("semantic-ui-css/semantic.min.css");
+
 function App() {
   let [showSideBar, setShowSideBar] = useState(false);
 
   let onClickHamburgerButton = useCallback(() => {
     setShowSideBar(!showSideBar);
   }, [showSideBar]);
+
+  useEffect(() => {
+    semanticCss.then(() => {
+      console.log("Css End");
+    });
+  }, []);
 
   return (
     <Fragment>
