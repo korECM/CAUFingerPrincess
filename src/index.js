@@ -11,7 +11,7 @@ import * as serviceWorker from "./serviceWorker";
 // import { composeWithDevTools } from "redux-devtools-extension";
 
 import WebfontLoader from "@dr-kobros/react-webfont-loader";
-import "semantic-ui-css/semantic.min.css";
+// import "semantic-ui-css/semantic.min.css";
 
 // webfontloader configuration object. *REQUIRED*.
 const config = {
