@@ -16,7 +16,7 @@ import "semantic-ui-css/semantic.min.css";
 // webfontloader configuration object. *REQUIRED*.
 const config = {
   google: {
-    families: ["Noto Sans KR:300,400,500,700"]
+    families: ["Noto Sans KR:500,700"]
   }
 };
 
