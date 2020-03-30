@@ -2,7 +2,7 @@
 name: Todo
 about: Suggest an idea for this project
 title: "[TODO]"
-labels: enhancement
+labels: ''
 assignees: ''
 
 ---
