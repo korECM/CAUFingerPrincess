@@ -649,10 +649,11 @@ module.exports = function(webpackEnv) {
           // The formatter is invoked directly in WebpackDevServerUtils during development
           formatter: isEnvProduction ? typescriptFormatter : undefined
         }),
-      new BundleAnalyzerPlugin({
-        analyzerHost: "127.0.0.1",
-        analyzerPort: 8080
-      }),
+      !isEnvProduction &&
+        new BundleAnalyzerPlugin({
+          analyzerHost: "127.0.0.1",
+          analyzerPort: 8080
+        }),
       new webpack.ProgressPlugin()
     ].filter(Boolean),
     // Some libraries import Node modules but don't use them in the browser.
