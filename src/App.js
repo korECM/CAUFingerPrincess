@@ -22,7 +22,11 @@ import LoadingAnimation from "./useful/loading/loading";
 const Calendar = lazy(() => import("./components/calendar/Calendar"));
 const SNS = lazy(() => import("./sns/SNS"));
 
-const semanticCss = import("semantic-ui-css/semantic.min.css");
+const semanticCss = () => {
+  import("semantic-ui-css/semantic.min.css").then(() => {
+    console.log("CSS Promise Done");
+  });
+};
 
 function App() {
   let [showSideBar, setShowSideBar] = useState(false);
@@ -32,9 +36,10 @@ function App() {
   }, [showSideBar]);
 
   useEffect(() => {
-    semanticCss.then(() => {
-      console.log("Css End");
-    });
+    // semanticCss.then(() => {
+    //   console.log("Css End");
+    // });
+    semanticCss();
   }, []);
 
   return (
