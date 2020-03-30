@@ -9,6 +9,7 @@ import HomeContents from "./HomeContents";
 // import Calendar from "./components/calendar/Calendar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import LoadingAnimation from "./useful/loading/loading";
+import "semantic-ui-css/semantic.min.css";
 
 const Calendar = lazy(() => import("./components/calendar/Calendar"));
 const SNS = lazy(() => import("./sns/SNS"));
