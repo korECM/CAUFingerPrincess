@@ -17,16 +17,16 @@ import HomeContents from "./HomeContents";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import LoadingAnimation from "./useful/loading/loading";
 // import "semantic-ui-css/semantic.min.css/";
-// import "./semantic.css";
+import "./semantic.css";
 
 const Calendar = lazy(() => import("./components/calendar/Calendar"));
 const SNS = lazy(() => import("./sns/SNS"));
 
-const semanticCss = () => {
-  import("semantic-ui-css/semantic.min.css").then(() => {
-    console.log("CSS Promise Done");
-  });
-};
+// const semanticCss = () => {
+//   import("semantic-ui-css/semantic.min.css").then(() => {
+//     console.log("CSS Promise Done");
+//   });
+// };
 
 function App() {
   let [showSideBar, setShowSideBar] = useState(false);
@@ -39,7 +39,7 @@ function App() {
     // semanticCss.then(() => {
     //   console.log("Css End");
     // });
-    semanticCss();
+    // semanticCss();
   }, []);
 
   return (
