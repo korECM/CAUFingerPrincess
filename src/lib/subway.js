@@ -7,13 +7,12 @@ import api from "./api";
 const getFirstLast = line => {
   return new Promise((resolve, reject) => {
     if (line !== 7 && line !== 9) reject("Invalid Line");
-    let url = api + `/getSubwayFirstLast/${line}`;
+    let url = api + `/readSubwayFirstLast/${line}`;
     request(url, (error, response, body) => {
       if (error) reject(error);
       if (!body || typeof body === "undefined") reject("No Body");
-      console.log(body);
       try {
-        resolve(JSON.parse(body));
+        resolve(JSON.parse(JSON.parse(body).data));
       } catch (error) {
         return { error };
       }
