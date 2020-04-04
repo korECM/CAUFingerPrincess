@@ -53,6 +53,9 @@ export default function NavigationBar({ show, onBackgroundClick }) {
         <li className="navSubMenu yHover">
           <Link to="/SNS">교내 SNS 모음</Link>
         </li>
+        <li className="navSubMenu yHover">
+          <Link to="/majorInfo">학과별 졸업/세부 정보</Link>
+        </li>
       </ul>
     </nav>
   );

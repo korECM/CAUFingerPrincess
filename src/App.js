@@ -21,6 +21,7 @@ import "./semantic.css";
 
 const Calendar = lazy(() => import("./components/calendar/Calendar"));
 const SNS = lazy(() => import("./sns/SNS"));
+const MajorInfo = lazy(() => import("./majorInfo/Majorinfo"));
 
 // const semanticCss = () => {
 //   import("semantic-ui-css/semantic.min.css").then(() => {
@@ -62,6 +63,7 @@ function App() {
           />
           <Suspense fallback={<LoadingAnimation />}>
             <Route path="/SNS" component={() => <SNS />} />
+            <Route path="/majorInfo" component={() => <MajorInfo />} />
             <Route path="/inDoor" component={() => <div>Indoor</div>} />
             <Route path="/schedule" component={Calendar} />
           </Suspense>
