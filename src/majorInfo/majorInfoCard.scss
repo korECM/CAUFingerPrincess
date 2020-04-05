@@ -49,6 +49,24 @@
   font-weight: bold;
 }
 
+.collageNameCard {
+  width: 100%;
+  height: flex;
+  flex: 1;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 10px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: #84cbe7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 30px;
+  font-weight: bold;
+}
+
 .titleCard {
   width: 100%;
   margin-top: 10px;
