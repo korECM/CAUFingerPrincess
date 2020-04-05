@@ -73,14 +73,14 @@ function MajorInfo() {
             </div>
             <div className="titleCard">
               <span>이수체계도</span>
-              <a href="https://abeek.cau.ac.kr/program/program0205_tab02.jsp">
+              <a href="http://econ.cau.ac.kr/department/class/">
                 경제학부 이수체계도
               </a>
             </div>
             <div className="titleCard">
               <span>학사 연락처</span>
-              <a href="http://e3home.cau.ac.kr/20141201/main/main.php">
-                310관 615호 | 02-820-5295/5333
+              <a href="http://econ.cau.ac.kr/">
+                310관 424호 | 02-820-5487/6646
               </a>
             </div>
           </div>
