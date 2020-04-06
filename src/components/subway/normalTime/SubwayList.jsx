@@ -11,7 +11,7 @@ function SubwayList({ line }) {
 
   useEffect(() => {
     let updateId = null;
-    const getData = async line => {
+    const getData = async (line) => {
       console.log("메인 API 호출", line);
       console.time("메인 API 호출" + line);
       let result = await getSubwayInfo(line);
@@ -37,7 +37,7 @@ function SubwayList({ line }) {
     };
   }, [line]);
 
-  const dataUpdate = useCallback(raw => {
+  const dataUpdate = useCallback((raw) => {
     let count = 0;
     const between = () => {
       if (raw) apiToUI(raw, count);
@@ -52,10 +52,10 @@ function SubwayList({ line }) {
     console.log(info);
     if (info.length === 0) return;
 
-    let results = [0, 1].map(index => {
+    let results = [0, 1].map((index) => {
       return info[index]
-        .filter(data => data.last !== "0" && data.time !== 0)
-        .map(data => {
+        .filter((data) => data.last !== "0" && data.time !== 0)
+        .map((data) => {
           let date = new Date();
           date.setSeconds(date.getSeconds() + data.time);
           let secondRaw = data.time >= count ? data.time - count : 0;
@@ -97,12 +97,12 @@ function SubwayList({ line }) {
       {!error && !noData && !loading && (
         <div className="subwayList">
           <div className="subwayInfo">
-            <span>{line === 7 ? "장암행" : "중앙보훈병원행"}</span>
+            <span>{line === 7 ? "장암행" : "개화행"}</span>
             <ul>{lists[0]}</ul>
           </div>
           <div className="vLine" />
           <div className="subwayInfo">
-            <span>{line === 7 ? "부평구청행" : "개화행"}</span>
+            <span>{line === 7 ? "부평구청행" : "중앙보훈병원행"}</span>
             <ul>{lists[1]}</ul>
           </div>
         </div>
