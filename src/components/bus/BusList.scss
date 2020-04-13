@@ -1,23 +1,64 @@
 .busCardListWrapper {
-    display: flex;
     background-color: white;
     width: 100%;
     height: 100%;
 }
 
+
 .busCardTable {
-    border: 0.5px solid #ECF0F2;
-    border-collapse: collapse;
     width: 100%;
+    height: 100%;
+}
 
-    th,
-    td {
-        border: 0.5px solid #ECF0F2;
-        font-size: 10px;
-    }
+.busCardTable th {
+    width: 100%;
+}
 
-    .busTableTitle {
-        font-size: 13px;
-        padding: 5px;
-    }
+.busListWrapper>thead {
+    width: 100%;
+}
+
+.stationNameWrapper {
+    display: flex;
+    width: 100%;
+    padding: 5px 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.stationName {
+    font-size: 16px;
+    font-weight: 300;
+    flex: 1 0;
+    text-align: center;
+}
+
+.busListWrapper td {
+    width: 50%;
+}
+
+.busListWrapper td:nth-child(1) {
+    border-right: 1px solid black;
+}
+
+.busList {
+    display: flex;
+}
+
+.busName {
+    color: green;
+    font-size: 12px;
+    margin-left: 17px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    flex: 1 0;
+}
+
+
+.busTime {
+    color: black;
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    flex: 1 0;
 }

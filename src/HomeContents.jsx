@@ -29,6 +29,8 @@ const NoticeCard = React.lazy(() =>
   import("./components/collegeNotice/CollageNotice")
 );
 
+const BusCard = React.lazy(() => import("./components/bus/BusCard.jsx"));
+
 function HomeContents(props) {
   return (
     <Fragment>
@@ -54,6 +56,9 @@ function HomeContents(props) {
         </Suspense>
         <Suspense fallback={<LoadingAnimation width="200" height="200" />}>
           <SubwayFirstLastCard line={9} />
+        </Suspense>
+        <Suspense fallback={<LoadingAnimation width="200" height="200" />}>
+          <BusCard />
         </Suspense>
         <div className="forCafeIndex">
           <CafeIndex />

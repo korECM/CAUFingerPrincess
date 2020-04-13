@@ -1,31 +1,50 @@
 import React, { useEffect, useCallback, useState } from "react";
 import "./BusList.scss";
 
-const BusList = () => {
+const BusList = ({ stationData }) => {
+  let { prevName, curName, nextName } = stationData;
+
+  let dummyData = [
+    {
+      busName: "5511",
+      time: "1분 30초",
+    },
+    {
+      busName: "동작01",
+      time: "곧 도착",
+    },
+  ];
+
   return (
     <div className="busCardListWrapper">
+      <div className="stationNameWrapper">
+        <span className="stationName">{prevName}</span>
+        <span className="stationName">{curName}</span>
+        <span className="stationName">{nextName}</span>
+      </div>
       <table className="busCardTable">
-        <thead><tr><th></th><th>흑석 -> 학교</th><th>상도 -> 학교</th></tr></thead>
-        <tbody>
-          <tr>
-            <td className="busTableTitle">흑석역</td>
-          </tr>
-          <tr>
-            <td className="busTableTitle">중앙대 정문</td>
-          </tr>
-          <tr>
-            <td className="busTableTitle">중앙대 중문</td>
-          </tr>
-          <tr>
-            <td className="busTableTitle">중앙대 후문</td>
-          </tr>
-          <tr>
-            <td className="busTableTitle">상도역</td>
-          </tr>
-          <tr>
-            <td className="busTableTitle">노량진</td>
-          </tr>
-        </tbody>
+        <tr className="busListWrapper">
+          <td>
+            {dummyData.map((data) => {
+              return (
+                <div className="busList">
+                  <span className="busName">{data.busName}</span>
+                  <span className="busTime">{data.time}</span>
+                </div>
+              );
+            })}
+          </td>
+          <td>
+            {dummyData.map((data) => {
+              return (
+                <div className="busList">
+                  <span className="busName">{data.busName}</span>
+                  <span className="busTime">{data.time}</span>
+                </div>
+              );
+            })}
+          </td>
+        </tr>
       </table>
     </div>
   );
